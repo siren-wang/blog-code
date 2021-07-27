@@ -12,7 +12,6 @@
         <Home v-if="$page.pageType === 'home'" />
         <Archive v-else-if="$page.pageType === 'archive'" />
         <Category v-else-if="$page.pageType === 'category'" />
-        <CategoryItem v-else-if="$page.pageType === 'categoryItem'" />
         <Tag v-else-if="$page.pageType === 'tag'" />
         <TagItem v-else-if="$page.pageType === 'tagItem'" />
         <FriendLink v-else-if="$page.pageType === 'friendLink'" />
@@ -28,7 +27,6 @@ import Home from '@theme/components/Home.vue'
 import Archive from '@theme/components/Archive.vue'
 import Category from '@theme/components/Category.vue'
 import Tag from '@theme/components/Tag.vue'
-import CategoryItem from '@theme/components/CategoryItem.vue'
 import TagItem from '@theme/components/TagItem.vue'
 import Post from '@theme/components/Post.vue'
 import FriendLink from '@theme/components/FriendLink.vue'
@@ -42,7 +40,6 @@ export default {
     Archive,
     Category,
     Tag,
-    CategoryItem,
     TagItem,
     Post,
     SideBar,

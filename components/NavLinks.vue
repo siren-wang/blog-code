@@ -49,6 +49,7 @@ export default {
     },
     nav () {
       const { locales } = this.$site
+      console.log('locales: ', locales);
       if (locales && Object.keys(locales).length > 1) {
         const currentLink = this.$page.path
         const routes = this.$router.options.routes
@@ -79,6 +80,7 @@ export default {
       return this.userNav
     },
     userLinks () {
+      console.log('links: ', this.nav);
       return (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
           items: (link.items || []).map(resolveNavLinkItem)

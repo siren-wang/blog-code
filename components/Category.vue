@@ -1,35 +1,37 @@
 <template>
-  <div class="theme-main__inner theme-category">
-    <div class="theme-category__list">
-      <h1 class="theme-category__title">{{$category.list.length}} categories in total</h1>
-      <router-link class="theme-category__link" v-for="item in $category.list" :key="item.name" :to="item.path">▪ {{ item.name }} [{{item.pages.length}}]</router-link>
+  <div class="theme-main__inner">
+    <div class="category-item" v-for="subject of $category.list" :key="subject.name">
+      <h1 class="category__title">▪ {{subject.name}}</h1>
+      <div class="post-list">
+        <a class="post-list__item" :href="item.path" v-for="item in sortArticles(subject.pages)" :key="item.path">
+          <span class="post-list__date">{{item.date}}</span>
+          <span class="post-list__title">{{item.title}}</span>
+        </a>
+      </div>
     </div>
+    <!-- <Pagination v-if="$pagination.length > 1"/> -->
   </div>
 </template>
 <script>
+// import { Pagination } from '@vuepress/plugin-blog/lib/client/components';
 export default {
-  name: 'Category'
+  name: 'Category',
+  components: {
+    // Pagination
+  },
+  methods: {
+    sortArticles(list) {
+      list.forEach(item => { item.date = `${new Date(item.frontmatter.date).toLocaleDateString()}` })
+      list.sort((a, b) => new Date(b.date) - new Date(a.date));
+      return list;
+    }
+  },
 }
 </script>
 <style lang="stylus">
-.theme-category
+.category-item
   background var(--theme-card-background)
   border-radius: 6px;
   padding: 2.15rem;
-  &__title
-    margin 0 0 1.5rem 0
-    font-size: 1.78571rem;
-    font-weight normal
-  &__link
-    display inline-block
-    background var(--theme-accent-color-005)
-    padding: 0 1em;
-    border-radius: 3px;
-    line-height: 2.4;
-    transition: background-color .15s;
-    margin: 0 1rem 1rem 0;
-    &:hover
-      background var(--theme-accent-color)
-      color #ffffff
-  
+  margin-bottom: 2rem;
 </style>

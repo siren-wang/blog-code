@@ -31,7 +31,7 @@
           />
       </header>
       <div class="article-con">
-        <Content class="article-content" :class="{'copy-code-enabled': $themeConfig.copy}" itemprop="articleBody" />
+        <Content class="article-content copy-code-enabled" itemprop="articleBody" />
         <div class="article-copyright">
           <ul>
             <li class="article-copyright__item">
@@ -78,6 +78,7 @@ export default {
   },
   computed: {
     isShowReward() {
+      console.log("this.$page.headers", this.$page.headers);
       if (this.$frontmatter.reward === false) {
         return false;
       }

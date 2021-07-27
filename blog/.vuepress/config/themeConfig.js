@@ -1,7 +1,7 @@
 module.exports = {
   siteName: 'Siren\'s Blog',
   logo: '/logo.jpg',
-  siteDesc: 'Paint the world black.',
+  siteDesc: 'Paint the world colorful.',
   nav: [
     { text: 'Home', link: '/' },
     { text: 'Languages', link: '/categories/theme/' },
@@ -15,7 +15,7 @@ module.exports = {
   social: [
     {
       type: 'email',
-      link: 'cmgddd@163.com'
+      link: 'siren.xrw@gmail.com'
     },
     {
       type: 'github',
@@ -78,6 +78,6 @@ module.exports = {
       canonical_base: 'http://80shuo.com',
     },
     palette: {},
-    comment: {}
-  }
+    comment: {},
+  },
 }

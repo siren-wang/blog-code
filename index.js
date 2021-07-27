@@ -6,7 +6,7 @@ module.exports = (options, {themeConfig}) => {
   themeConfig = Object.assign(themeConfig, {
     searchPlaceholder: themeConfig.searchPlaceholder || 'Search',
     nav: themeConfig.nav || [
-      { text: '🏠 Home', link: '/' }
+      { text: 'Home', link: '/' }
     ],
     hostname: themeConfig.hostname || '',
     wordPerminute: themeConfig.wordPerminute || {cn: 300, en: 160},
@@ -102,7 +102,12 @@ module.exports = (options, {themeConfig}) => {
       'vuepress-plugin-seo', themeConfig.seo || false
     ],
     ['@vuepress/pwa', themeConfig.pwa || false],
-    ['one-click-copy', themeConfig.copy || false],
+    ['one-click-copy', {
+      copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+      copyMessage: 'Copy successfully and then paste it for use.', // default is 'Copy successfully and then paste it for use.'
+      duration: 1000, // prompt message display time.
+      showInMobile: false, // whether to display on the mobile side, default: false.
+    }],
     require('./plugin/demo-code'),
     require('./plugin/theme-utils'),
     require('./plugin/float-menu')
