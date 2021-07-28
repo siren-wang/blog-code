@@ -3,7 +3,8 @@ date: 2021-07-26
 category: Javascript
 title: Applicative Functor
 ---
-# JavaScript 的函数是*可调用*的，当 `hi` 后面紧跟 `()` 的时候就会运行并返回一个值；如果没有 `()`，`hi` 就简单地返回存到这个变量里的函数。
+
+JavaScript 的函数是*可调用*的，当 `hi` 后面紧跟 `()` 的时候就会运行并返回一个值；如果没有 `()`，`hi` 就简单地返回存到这个变量里的函数。
 
 ```js
 // 太傻了

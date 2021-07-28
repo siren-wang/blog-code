@@ -1,9 +1,5 @@
 <template>
     <div class="theme-SubNav">
-      <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': $page.pageType === 'archive'}" to="/archives/">
-        <span class="theme-SubNav__count">{{archivesCount}}</span>
-        <span class="theme-SubNav__name">Archives</span>
-      </RouterLink>
       <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': ['category', 'categoryItem'].includes($page.pageType)}" to="/categories/">
         <span class="theme-SubNav__count">{{$category.length}}</span>
         <span class="theme-SubNav__name">Categories</span>
@@ -11,6 +7,10 @@
       <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': ['tag', 'tagItem'].includes($page.pageType)}" to="/tags/">
         <span class="theme-SubNav__count">{{$tag.length}}</span>
         <span class="theme-SubNav__name">Tags</span>
+      </RouterLink>
+      <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': $page.pageType === 'archive'}" to="/archives/">
+        <span class="theme-SubNav__count">{{archivesCount}}</span>
+        <span class="theme-SubNav__name">Archives</span>
       </RouterLink>
     </div>
 </template>

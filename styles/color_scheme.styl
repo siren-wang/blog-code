@@ -1,11 +1,12 @@
 $lightMode = 
-  --theme-background #ffffff url('../assets/images/bg.png')
+  --theme-background #ffffff
   --theme-accent-color $accentColor
   --theme-foreground-color: $textColor;
   --theme-border-color: $borderColor;
   --theme-sidebar-background: $accentColor linear-gradient(to bottom, $accentColor 0%, darken($accentColor, 20%) 100%);
   --theme-card-background: #fff;
   --theme-card-boxshadow: $cardBoxShadow;
+  --theme-search-boxshadow: $searchBoxShadow;
   --theme-highlight-00: #e3eaf2;
   --theme-highlight-01: #d0dae7; 
   --theme-highlight-01-048: alpha(#d0dae7, .48);
@@ -37,6 +38,7 @@ $darkMode =
   --theme-sidebar-background: $dark_accentColor;
   --theme-card-background: $dark_cardBackgroundColor;
   --theme-card-boxshadow: $dark_cardBoxShadow;
+  --theme-search-boxshadow: $dark_searchBoxShadow;
   --theme-highlight-00: #111b27;
   --theme-highlight-01: #213043;
   --theme-highlight-01-048: alpha(#213043, .48);

@@ -34,4 +34,5 @@ export default {
   border-radius: 6px;
   padding: 2.15rem;
   margin-bottom: 2rem;
+  box-shadow: var(--theme-card-boxshadow);
 </style>

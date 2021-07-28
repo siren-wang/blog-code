@@ -3,7 +3,6 @@ date: 2021-07-26
 category: React
 title: React Life Circle
 ---
-# React
 
 组件的生命周期可分成三个状态：
 

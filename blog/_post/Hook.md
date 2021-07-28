@@ -2,14 +2,12 @@
 date: 2021-07-26
 category: React
 title: React Hooks
-sidebar: auto
 cover: /images/react-hooks-best-practices-lead_.jpeg
 ---
 
 > 组件的最佳写法应该是函数，而不是类。
 
 <!-- more -->
-# Hook API
 
 > *Hook* 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 >

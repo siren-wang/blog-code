@@ -101,14 +101,20 @@ export default {
   right: 1rem;
   bottom: 1.3rem;
   z-index: 9;
-  color: #fff;
+  color: var(--theme-foreground-color);
   text-align: center;
   &--open
     .float-menu__dot
       transform rotate(-90deg)
     .float-menu__list > span
-      opacity: 1;
-      z-index 0
+      opacity: 0.9;
+      z-index 0;
+      @media (any-hover hover)
+        &:hover
+          background var(--theme-accent-color)
+          box-shadow 0 0 15px var(--theme-accent-color)
+          &:before
+            color #fff
       &.icon-search
         z-index -1
       &:nth-child(3n-2)
@@ -160,7 +166,7 @@ export default {
       width: 3.4rem;
       height: 3.4rem;
       border-radius: 50%;
-      background-color: rgba(0,0,0,.8);
+      background-color: var(--theme-card-background);
       box-shadow: 0 2px 4px 1px rgba(0,0,0,.2);
       font-size: 1.5rem;
       line-height: 3.4rem;

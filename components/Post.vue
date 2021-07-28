@@ -78,7 +78,6 @@ export default {
   },
   computed: {
     isShowReward() {
-      console.log("this.$page.headers", this.$page.headers);
       if (this.$frontmatter.reward === false) {
         return false;
       }
@@ -104,6 +103,7 @@ export default {
   border-radius: 6px;
   line-height 1.8
   color var(--theme-foreground-color)
+  box-shadow: var(--theme-card-boxshadow)
   h2, h3, h4, h5, h6
     margin: 2rem 0 1rem;
     font-weight: 700;

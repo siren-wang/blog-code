@@ -1,7 +1,7 @@
 ---
 date: 2021-07-26
 category: Git
-title: Git
+title: Git Basic Concepts
 ---
 
 # CircleCI: Continuous Integration and Delivery

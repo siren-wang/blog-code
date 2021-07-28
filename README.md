@@ -25,7 +25,7 @@ A flat and clean Blog Theme for VuePress site. inspired by [Hexo-theme-inside](h
 - 代码复制
 - 暗黑模式
 - 响应式主题
-
+<!-- 
 ## Install
 
 ```
@@ -75,4 +75,4 @@ Feedback to developer: https://github.com/80maker/vuepress-theme-maker/issues
 - [@vuepress/theme-blog](https://github.com/vuepress/vuepress-theme-blog)
 
 ### license
-[MIT](https://github.com/80maker/vuepress-theme-maker/blob/master/LICENSE)
+[MIT](https://github.com/80maker/vuepress-theme-maker/blob/master/LICENSE) -->
