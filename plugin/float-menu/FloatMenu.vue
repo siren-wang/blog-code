@@ -24,7 +24,7 @@
           cx="50%"
           cy="50%"/>
       </svg>
-      <div class="float-menu__dot"  v-if="count === 0"></div>
+      <div class="float-menu__dot"  v-if="isNaN(count) || count === 0"></div>
       <div class="float-menu__text" v-else>{{count}}<span>%</span></div>
     </div>
   </div>
@@ -107,7 +107,7 @@ export default {
     .float-menu__dot
       transform rotate(-90deg)
     .float-menu__list > span
-      opacity: 0.9;
+      opacity: 0.95;
       z-index 0;
       @media (any-hover hover)
         &:hover

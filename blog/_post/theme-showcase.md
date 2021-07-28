@@ -1,7 +1,7 @@
 ---
 date: 2021-07-23
 title: Theme Markdown 语法示例
-category: theme
+category: javascript
 tags:
   - VuePress
 ---
@@ -168,7 +168,7 @@ Above is a `<hr>`, I guess.
 ## Blockquote
 
 > 要么是酒，要么是女人，要么是神，家族，王，梦想，子女，力量，人如果不沉醉于某些东西估计都撑不下去吧，所有人都是某些东西的奴隶，就连那家伙... 
-  
+
   *-- 凯尼?阿克曼 《进击的巨人》*
 
 ## Code Block
@@ -253,7 +253,7 @@ try {
 :::
 
 ::: details 点击查看代码
-```js
+​```js
 console.log('你好，VuePress！')
 ```
 :::
@@ -264,7 +264,7 @@ console.log('你好，VuePress！')
 :::
 
 ::: details 点击查看代码
-```js
+​```js
 console.log('你好，VuePress！')
 ```
 :::
@@ -280,7 +280,7 @@ VuePress 使用了 [Prism](https://prismjs.com/) 来为 markdown 中的代码块
 **输入**
 
 ````
-``` js
+​``` js
 export default {
   name: 'MyComponent',
   // ...
@@ -290,7 +290,7 @@ export default {
 
 **输出**
 
-``` js
+​``` js
 export default {
   name: 'MyComponent',
   // ...
@@ -300,7 +300,7 @@ export default {
 **输入**
 
 ````
-``` html
+​``` html
 <ul>
   <li
     v-for="todo in todos"
@@ -314,7 +314,7 @@ export default {
 
 **输出**
 
-``` html
+​``` html
 <ul>
   <li
     v-for="todo in todos"
@@ -333,7 +333,7 @@ export default {
 **输入**
 
 ````
-``` js {4}
+​``` js {4}
 export default {
   data () {
     return {
@@ -346,7 +346,7 @@ export default {
 
 **输出**
 
-``` js{4}
+​``` js{4}
 export default {
   data () {
     return {
@@ -365,7 +365,7 @@ export default {
 **Input**
 
 ````
-``` js{1,4,6-7}
+​``` js{1,4,6-7}
 export default { // Highlighted
   data () {
     return {
@@ -382,7 +382,7 @@ export default { // Highlighted
 
 **Output**
 
-``` js{1,4,6-8}
+​``` js{1,4,6-8}
 export default { // Highlighted
   data () {
     return {

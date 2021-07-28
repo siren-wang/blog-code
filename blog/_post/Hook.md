@@ -9,6 +9,8 @@ cover: /images/react-hooks-best-practices-lead_.jpeg
 
 <!-- more -->
 
+## 类组件与函数组件
+
 > *Hook* 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 >
 > *Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
@@ -16,8 +18,6 @@ cover: /images/react-hooks-best-practices-lead_.jpeg
 **Hooks allow you to reuse stateful logic without changing your component hierarchy.** 
 
 
-
-### 类组件与函数组件
 
 Redux 的作者 Dan Abramov [总结](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)了组件类的几个缺点：
 
@@ -30,6 +30,8 @@ Redux 的作者 Dan Abramov [总结](https://medium.com/@dan_abramov/making-sens
 > React Hooks 的设计目的，就是加强版函数组件，完全不使用"类"，就能写出一个全功能的组件。
 
 
+
+## Hook API
 
 ### useState
 

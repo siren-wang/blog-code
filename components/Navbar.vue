@@ -67,6 +67,9 @@ export default {
     z-index 1
     input
       background-color: var(--theme-card-background);
+      @media (any-hover hover)
+        &:hover
+          border-color var(--theme-accent-color);
     .suggestions
       background-color: var(--theme-card-background);
       text-align left

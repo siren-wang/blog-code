@@ -1,5 +1,5 @@
 ---
-date: 2021-07-26
+date: 2021-05-17
 category: Javascript
 title: Applicative Functor
 ---

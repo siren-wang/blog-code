@@ -85,9 +85,12 @@ export default {
     height: 8rem;
     border: 1px solid;
     border-radius: 50%;
-    border-color rgba(96,125,139,.4)
+    border-color rgb(75, 75, 75);
     vertical-align: bottom;
     box-sizing content-box
+    @media (any-hover hover)
+        &:hover
+          border-color rgb(125,125,125)
   &__name
     font-family: var(--theme-font-logo);
     display block
