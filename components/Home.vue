@@ -48,6 +48,7 @@ export default {
   margin-bottom: 1.75rem;
   border-radius: 6px;
   background var(--theme-card-background)
+  box-shadow var(--theme-card-boxshadow)
 .article-title
   margin 0
   a

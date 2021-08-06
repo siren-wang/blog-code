@@ -104,9 +104,23 @@ export default {
   line-height 1.8
   color var(--theme-foreground-color)
   box-shadow: var(--theme-card-boxshadow)
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  h2
+    font-size: 2.2rem;
+    border-bottom: 1px solid var(--theme-h2-decorate);
+  h3
+    font-size: 1.8rem;
+  mark
+    background-color #fbb972;
+    padding: 0.2em;
+    border-radius: 3px;
+  p, li
+    font-size: 1.1rem;
   h2, h3, h4, h5, h6
     margin: 2rem 0 1rem;
     font-weight: 700;
+  code
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
 .article-content
   a
     border-bottom: 1px dotted;

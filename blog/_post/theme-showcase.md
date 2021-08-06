@@ -300,7 +300,7 @@ export default {
 **输入**
 
 ````
-​``` html
+<!-- ​``` html
 <ul>
   <li
     v-for="todo in todos"
@@ -309,7 +309,7 @@ export default {
     {{ todo.text }}
   </li>
 </ul>
-```
+``` -->
 ````
 
 **输出**

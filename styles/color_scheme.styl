@@ -7,6 +7,9 @@ $lightMode =
   --theme-card-background: #fff;
   --theme-card-boxshadow: $cardBoxShadow;
   --theme-search-boxshadow: $searchBoxShadow;
+  --theme-code-background: #f8f8f8;
+  --theme-quote-color: #ddd;
+  --theme-h2-decorate: #eee;
   --theme-highlight-00: #e3eaf2;
   --theme-highlight-01: #d0dae7; 
   --theme-highlight-01-048: alpha(#d0dae7, .48);
@@ -28,6 +31,7 @@ $lightMode =
   --theme-accent-color-01: alpha($accentColor, .1)
   --theme-accent-color-02: alpha($accentColor, .2)
   --theme-accent-color-04: alpha($accentColor, .4)
+  --theme-accent-color-06: alpha($accentColor, .6)
   --theme-accent-color-08: alpha($accentColor, .8)
 
 $darkMode =
@@ -39,6 +43,9 @@ $darkMode =
   --theme-card-background: $dark_cardBackgroundColor;
   --theme-card-boxshadow: $dark_cardBoxShadow;
   --theme-search-boxshadow: $dark_searchBoxShadow;
+  --theme-code-background: $dark_codeBackground;
+  --theme-quote-color: $dark_accentColor;
+  --theme-h2-decorate: #0000;
   --theme-highlight-00: #111b27;
   --theme-highlight-01: #213043;
   --theme-highlight-01-048: alpha(#213043, .48);
@@ -68,7 +75,7 @@ html
   --theme-font-base: 'Josefin Sans','PingFang SC','Microsoft YaHei';
   --theme-font-logo: Lobster,cursive,'Josefin Sans','PingFang SC','Microsoft YaHei';
   --theme-font-menu: IM Fell DW Pica SC,'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-heading: impact,'Josefin Sans','PingFang SC','Microsoft YaHei';
+  --theme-font-heading: 'Josefin Sans','PingFang SC','Microsoft YaHei';
   --theme-font-label: Sarpanch,'Josefin Sans','PingFang SC','Microsoft YaHei';
   --theme-font-print: 'PingFang SC','Microsoft YaHei';
   {$lightMode}

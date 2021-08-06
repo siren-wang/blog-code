@@ -1,5 +1,5 @@
 ---
-date: 2021-06-2
+date: 2021-06-02
 category: principles
 title: Clean Code 代码简洁之道
 ---

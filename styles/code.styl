@@ -1,25 +1,15 @@
-{$contentClass}, {$descClass}, .friend-link__content
+{$contentClass}, .friend-link__content
   blockquote
-    background: var(--theme-accent-color-005);
-    border-left: 3px solid #ccc;
-    border-radius 3px
-    margin: 1.5em 0;
-    padding: .5em 10px 1em;
+    border-left: 3px solid var(--theme-quote-color);
+    margin: 2em 2.2em;
+    padding: 0.5em 2.2em;
     quotes: "\201C""\201D""\2018""\2019";
-    &:before
-      color: #ccc;
-      content: open-quote;
-      font-size: 4em;
-      line-height: .1em;
-      margin-right: .25em;
-      vertical-align: -.4em;
   table
     max-width: 100%;
     display: block;
     border-collapse collapse
     margin: 1rem 0;
     overflow-x: auto
-
 
   tr 
     border-top: 1px solid #dfe2e5
@@ -35,7 +25,6 @@
     border: 1px solid #dfe2e5;
     padding: .6em 1em
   pre, pre[class*="language-"]
-    border 1px solid var(--theme-border-color)
     line-height 1.5
     padding 1.25rem 1.5rem
     margin 0.85rem 0
@@ -65,7 +54,6 @@
         opacity: .2
         background-color var(--theme-highlight-02)
     pre, pre[class*="language-"]
-      background var(--theme-accent-color-005)
       position relative
       z-index 1
       .code-copy
@@ -77,9 +65,7 @@
       right 1em
       font-size 0.75rem
       color var(--theme-highlight-03-085)
-    &:not(.line-numbers-mode)
-      .line-numbers-wrapper
-        display none
+        
     &.line-numbers-mode
       .highlight-lines .highlighted
           position relative
@@ -95,16 +81,10 @@
             opacity: .2
           background-color var(--theme-highlight-02)
       pre
-        padding-left $lineNumbersWrapperWidth + 1 rem
+        padding-left 2 rem
         vertical-align middle
       .line-numbers-wrapper
-        position absolute
-        top 0
-        width $lineNumbersWrapperWidth
-        text-align center
-        color var(--theme-highlight-03-085)
-        padding 1.25rem 0
-        line-height 1.5
+        display: none
         br
           user-select none
         .line-number
@@ -121,9 +101,6 @@
         width $lineNumbersWrapperWidth
         height 100%
         border-radius 6px 0 0 6px
-        border-right 1px solid var(--theme-highlight-02-048)
-        background: var(--theme-highlight-01-048)
-
 
   for lang in $codeLang
     div{'[class~="language-' + lang + '"]'}
@@ -165,7 +142,7 @@
     color: var(--theme-highlight-04);
     padding: .25rem .5rem;
     margin: 0;
-    font-size: .85em;
+    font-size: .9em;
     background-color: var(--theme-accent-color-005);
     border-radius: 3px;
 
@@ -180,7 +157,7 @@
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
+    line-height: 1.6;
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
@@ -213,7 +190,8 @@
 
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
-    background: var(--theme-highlight-00);
+    background: var(--theme-code-background);
+    box-shadow var(--theme-card-boxshadow);
   }
 
   /* Inline code */
@@ -414,3 +392,20 @@
     border-radius: 3px;
     background-color: currentColor;
     box-shadow: 1em 0 0 0 currentColor,-1em 0 0 0 currentColor
+
+{$descClass}
+  blockquote
+    background: var(--theme-accent-color-005);
+    border-left: 3px solid #ccc;
+    border-radius 3px
+    margin: 1.5em 0;
+    padding: .5em 10px 1em;
+    &:before
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: .1em;
+      margin-right: .25em;
+      vertical-align: -.4em;
+
+

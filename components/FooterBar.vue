@@ -6,6 +6,7 @@
         :title="`${item.type}`" :href="`mailto:${item.link}`">{{item.type}}</a>
         <a v-else-if="item.type === 'github'" :key="item.type" target="_blank" rel="external nofollow noopener" :class="`icon-${item.type}`"
         :title="`${item.type}`" :href="`https://github.com/${item.link}`">{{item.type}}</a>
+        
         <a v-else :key="item.type" target="_blank" rel="external nofollow noopener" :class="`icon-${item.type}`"
         :title="`${item.type}`" :href="`${item.link}`">{{item.type}}</a>
       </template>

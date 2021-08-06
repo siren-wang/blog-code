@@ -23,14 +23,14 @@ module.exports = {
     },
     {
       type: 'qq',
-      link: '//qm.qq.com/cgi-bin/qm/qr?k=fknyQ434nkzVUWUmJ6rpIPctkS9eyQaZ&jump_from=webapi'
+      link: 'https://qm.qq.com/cgi-bin/qm/qr?k=KJY-Ba59H1bP-2vQcM0KqxZY2tZkVayT&noverify=0'
     },
     {
       type: 'feed',
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2021 ❤️ <a target="_blank" href="https://17ria.com/">Siren Wang</a>',
+  copyright: '© 2021 ❤️ <a target="_blank" href="#">Siren Wang</a>',
   blog: {
     directories: [
       {
@@ -71,13 +71,19 @@ module.exports = {
       }
     ],
     sitemap: {
-      hostname: 'https://80shuo.com',
+      // hostname: 'https://80shuo.com',
       exclude: ['/404.html']
     },
     feed: {
-      canonical_base: 'http://80shuo.com',
+      // canonical_base: 'http://80shuo.com',
     },
     palette: {},
-    comment: {},
+    comment: {
+      // service: 'vssue',
+      // owner: 'owner',
+      // repo: 'repo',
+      // clientId: 'your clientId',
+      // clientSecret: 'your clientSecret',
+    }
   },
 }
