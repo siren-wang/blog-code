@@ -1,7 +1,9 @@
 ---
 date: 2021-05-17
 category: Javascript
-title: Applicative Functor
+title: Applicative Functor 函数式编程
+tags:
+  - Functional Programming
 ---
 
 JavaScript 的函数是*可调用*的，当 `hi` 后面紧跟 `()` 的时候就会运行并返回一个值；如果没有 `()`，`hi` 就简单地返回存到这个变量里的函数。
@@ -27,3 +29,4 @@ const getServerStuff = callback => ajaxCall(callback);
 // ...就等于
 const getServerStuff = ajaxCall // <-- 看，没有括号哦
 ```
+

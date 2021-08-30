@@ -32,7 +32,8 @@
 @media (min-width: $MQMobile)
   .theme-main__inner
     margin 2rem auto
-    max-width calc(100% - 4rem);
+    // max-width calc(100% - 4rem);
+    max-width: 80%;
     min-width 640px;
   .theme-search__inner
     max-width: var(--theme-content-width);
@@ -74,6 +75,11 @@
           content: "";
   .article-item
     margin 1rem!important
+    .article-cover
+      height 200px
+      .article-title-wrapper h1
+        font-size 1.55rem
+        padding 0 30px
   .theme-sidebar__inner
     .theme-header
       background: none

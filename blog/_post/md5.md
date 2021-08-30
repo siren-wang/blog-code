@@ -1,6 +1,6 @@
 ---
 date: 2021-07-23
-category: javascript
+category: Javascript
 title: 浏览器端不用第三方包也可以获取md5值
 ---
 

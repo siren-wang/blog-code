@@ -4,11 +4,11 @@ category: React
 title: Redux基础
 ---
 
-> Reducer 函数的形式是`(state, action) => newState`
+> Reducer 函数的形式是 `(state, action) => newState`
 
 <!-- more -->
 
-Redux 的核心概念是，组件发出 action 与状态管理器通信。状态管理器收到 action 以后，使用 Reducer 函数算出新的状态，Reducer 函数的形式是`(state, action) => newState`
+Redux 的核心概念是，组件发出 action 与状态管理器通信。状态管理器收到 action 以后，使用 Reducer 函数算出新的状态，Reducer 函数的形式是 `(state, action) => newState`
 
 ![redux flow](/Users/mac/Documents/image/redux flow.webp)
 

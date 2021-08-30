@@ -79,11 +79,13 @@ module.exports = {
     },
     palette: {},
     comment: {
-      // service: 'vssue',
-      // owner: 'owner',
-      // repo: 'repo',
-      // clientId: 'your clientId',
-      // clientSecret: 'your clientSecret',
+      service: 'valine',
+      appId: 'yjSOq361A6Hu4FGqG2m8Ln8f-gzGzoHsz',
+      appKey: 'nADAGze47rQCdy8yuK3oYN8z',
+      notify: false, 
+      verify: false, 
+      visitor: true, // 阅读量统计
+      placeholder: "快来评论我_(:з」∠)_",
     }
   },
 }

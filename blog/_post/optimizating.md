@@ -2,6 +2,7 @@
 date: 2021-08-05
 category: React
 title: Optimizing Performance
+cover: /images/react-native.png
 tags:
   - 性能优化
 ---

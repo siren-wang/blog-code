@@ -101,7 +101,6 @@ export default {
   right: 1rem;
   bottom: 1.3rem;
   z-index: 9;
-  color: var(--theme-foreground-color);
   text-align: center;
   &--open
     .float-menu__dot
@@ -185,7 +184,7 @@ export default {
       transform-origin: 50% 50%;
   &__text
     position relative
-    font-family var(--theme-font-label)
+    font-family var(--theme-font-heading)
     font-size 1.2rem
     span
       font-size .75rem

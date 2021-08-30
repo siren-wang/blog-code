@@ -1,13 +1,13 @@
 ---
 date: 2021-08-05
 category: React
-title: Optimizing Performance
+title: PureComponent
 tags:
   - 性能优化
 
 ---
 
-> `PureComponent`相比于`Component`，在`shouldComponentUpdate`阶段多了一层浅比较。
+> `PureComponent` 相比于`Component ` ，在 `shouldComponentUpdate` 阶段多了一层浅比较。
 
 <!-- more -->
 

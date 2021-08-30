@@ -83,22 +83,37 @@ export default {
     padding: 2px;
     width: 8rem;
     height: 8rem;
-    border: 1px solid;
+    border: 1px solid var(--theme-border-color);
     border-radius: 50%;
-    border-color rgb(75, 75, 75);
+    // border-color rgb(75, 75, 75);
     vertical-align: bottom;
     box-sizing content-box
     @media (any-hover hover)
         &:hover
-          border-color rgb(125,125,125)
+          border-color rgb(120,120,120)
   &__name
     font-family: var(--theme-font-logo);
-    display block
+    display block;
     margin: 1.5rem;
     font-size: 1.714285rem;
     transition: color .15s;
+    position: relative;
+    background-image: linear-gradient(to right, #f6b265, #8837a5, #839dc7, #ec7c7f,  #f6b265);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    &:hover
+      -webkit-animation: run 30s linear 0s infinite;
+      animation: run 30s linear 0s infinite;
   &__slogan
     padding: 0 1.6rem 1rem;
     line-height: 1.5;
     opacity: .63;
+  @keyframes run { 
+    100% { background-position: 400% 0px; } 
+  }
+// @keyframes slidetounlock{
+// 	0%  { background-position: 0 0;}
+//   100% { background-position: -150% 0;}
+// }
 </style>

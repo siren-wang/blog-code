@@ -1,6 +1,6 @@
 <template>
     <div class="theme-SubNav">
-      <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': ['category', 'categoryItem'].includes($page.pageType)}" to="/categories/">
+      <RouterLink class="theme-SubNav__item" :class="{'theme-SubNav__item--active': ['category', 'categoryItem'].includes($page.pageType) || $site.subNav === 'categories' }" to="/categories/">
         <span class="theme-SubNav__count">{{$category.length}}</span>
         <span class="theme-SubNav__name">Categories</span>
       </RouterLink>
@@ -66,7 +66,7 @@ export default {
       &:after
         transform: scaleX(1);
     &:hover:after
-      transform: scaleX(1);
+      // transform: scaleX(1);
   &__count
     display: block;
     margin: 0 .5rem;

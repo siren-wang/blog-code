@@ -19,7 +19,7 @@
           </h1>
         </div>
       </header>
-      <header v-else :style="headerStyle" class="article__header">
+      <header v-else class="article__header">
         <h1 class="post-title" itemprop="name headline">
             {{ $frontmatter.title }}
           </h1>
@@ -35,8 +35,8 @@
         <div class="article-copyright">
           <ul>
             <li class="article-copyright__item">
-              <strong class="article-copyright__title">Last-updated<span>:</span></strong>
-              <p class="article-copyright__text">{{$page.lastUpdated}}</p>
+              <strong class="article-copyright__title">Last-updated: </strong>
+              <span class="article-copyright__text">{{$page.lastUpdated}}</span>
             </li>
             <!-- <li class="article-copyright__item">
               <strong class="article-copyright__title">Copyright<span>:</span></strong>
@@ -44,9 +44,9 @@
                   BY-NC-ND 4.0</a>）</p>
             </li> -->
             <li class="article-copyright__item">
-              <strong class="article-copyright__title">Link<span>:</span></strong>
-              <p class="article-copyright__text"><a :href="pageLink"
-                  :title="$page.title">{{pageLink}}</a></p>
+              <strong class="article-copyright__title">Link: </strong>
+              <span class="article-copyright__text"><a :href="pageLink"
+                  :title="$page.title">{{pageLink}}</a></span>
             </li>
           </ul>
         </div>
@@ -91,6 +91,7 @@ export default {
       }
     },
     pageLink() {
+      console.log('$page.lastUpdated', this.$page.lastUpdated);
       return `${this.$themeConfig.hostname}${this.$page.path}`;
     }
   }
@@ -104,31 +105,36 @@ export default {
   line-height 1.8
   color var(--theme-foreground-color)
   box-shadow: var(--theme-card-boxshadow)
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  // font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   h2
     font-size: 2.2rem;
     border-bottom: 1px solid var(--theme-h2-decorate);
   h3
     font-size: 1.8rem;
+    margin: 3rem 0 1rem;
+  h4
+    font-size: 1.2rem;
   mark
     background-color #fbb972;
     padding: 0.2em;
     border-radius: 3px;
   p, li
-    font-size: 1.1rem;
-  h2, h3, h4, h5, h6
+    font-size: 1.2rem;
+  h2, h4, h5, h6
     margin: 2rem 0 1rem;
     font-weight: 700;
   code
     font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
 .article-content
   a
-    border-bottom: 1px dotted;
+    // border-bottom: 1px dotted;
     transition: color .15s,border-color .15s,opacity .15s;
 .article__header
   .post-title
-    padding: 4.3rem 2.15rem 2.15rem;
-    margin 0
+    padding: 4.4rem 2.15rem 2.15rem;
+    margin 0;
+    font-size: 2rem;
   .post-meta
     padding: 0px 2.15rem;
     line-height: 3;
@@ -139,6 +145,22 @@ export default {
   background-position: 50% center;
   background-size: cover;
   color: rgb(255, 255, 255);
+  position relative;
+  // background-color: rgba(64,64,64,.2zz8);
+  // background-image: var(--bg-image);
+  // 'background-color': this.$frontmatter.coverBgColor
+  &:after
+    // position absolute
+    z-index 1
+    // border-radius 2em
+    // left 0
+    // top 0
+    // right 0
+    // bottom 0
+    content ''
+    // opacity .63
+    // transition opacity .4s
+    background-color: rgba(64,64,64,.28);
 .article__header-con
   padding: 2.5rem 2.15rem 1rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
@@ -151,6 +173,14 @@ export default {
   border-radius: 3px;
   word-break: break-word;
   line-height: 1.8;
+.article-overlay
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background-size: 100%;
+  background-position: 50% center;
+  background-size: cover;
+  // background-color: rgba(64,64,64,.28);
   ul
     margin 0
     padding-left 0
@@ -186,7 +216,16 @@ export default {
     color var(--theme-accent-color)!important
 abbr
   cursor help
+
 @media (max-width: $MQMobile)
   .post-title
     margin-top 0
+:root
+  .dark
+    a
+     color: var(--theme-accent-color);
+  .post
+    .article-content
+      a
+        color: var(--theme-accent-color);
 </style>

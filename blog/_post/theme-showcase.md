@@ -309,12 +309,12 @@ export default {
     {{ todo.text }}
   </li>
 </ul>
-``` -->
+​``` -->
 ````
 
 **输出**
 
-​``` html
+``` html
 <ul>
   <li
     v-for="todo in todos"
@@ -333,7 +333,7 @@ export default {
 **输入**
 
 ````
-​``` js {4}
+``` js {4}
 export default {
   data () {
     return {
@@ -346,7 +346,7 @@ export default {
 
 **输出**
 
-​``` js{4}
+``` js{4}
 export default {
   data () {
     return {
@@ -365,7 +365,7 @@ export default {
 **Input**
 
 ````
-​``` js{1,4,6-7}
+``` js{1,4,6-7}
 export default { // Highlighted
   data () {
     return {
@@ -382,7 +382,7 @@ export default { // Highlighted
 
 **Output**
 
-​``` js{1,4,6-8}
+``` js{1,4,6-8}
 export default { // Highlighted
   data () {
     return {
@@ -400,7 +400,7 @@ export default { // Highlighted
 
 你可以通过配置来为每个代码块显示行号：
 
-``` js
+​``` js
 // .vuepress/config.js -> markdown
 
 module.exports = {

@@ -18,20 +18,14 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "you@example.com"
 ```
 
-
-
-## Checking Your Git Setup (Name & Email)
+### Checking Your Git Setup (Name & Email)
 
 ```bash
 $ git config --global user.name
 $ git config --global user.email
 ```
 
-
-
-df
-
-## Staging
+### Staging
 
 Staging is telling Git what files we want to commit (new untracked files, modified files, or deleted files). We add files to a staging area, and then we commit what has been staged. 
 
@@ -49,26 +43,26 @@ $ git add "File A" "File D"
   代码写一半，发现忘记切换分支了？(git stash & git checkout)
   代码需要回滚了？（git reset）
 
-## Check Status
+### Check Status
 
 ```bash
 $ git status
 ```
 
-## Unstage a File
+### Unstage a File
 
 ```bash
 $ git reset HEAD example.html
 ```
 
-## Deleting Files
+### Deleting Files
 
 ```bash
 $ git rm example.html to remove a file (and stage it)
 $ git rm -r myfolder** to remove a folder (and stage it)
 ```
 
-## git commit 
+### git commit 
 
 ```bash
 $ git commit -m "Message that describes what this change does"
@@ -84,7 +78,7 @@ $ git commit -m "Message that describes what this change does"
 
 
 
-## Fixing Your Last Commit Message
+### Fixing Your Last Commit Message
 
 If you made a mistake in your last commit message, run this command:
 
@@ -94,7 +88,7 @@ $ git commit --amend -m "Put your corrected message here"
 
 
 
-## View a List of Commits
+### View a List of Commits
 
 To see a simplified list of commits:
 
@@ -118,10 +112,6 @@ $ git log --stat
 
 
 
-
-
-
-
 ```bash
 $ git checkout -b dev
 ```
@@ -134,13 +124,25 @@ $ git checkout dev
 Switched to branch 'dev'
 ```
 
-##  **在 Git 中切换到一个现有分支**
+###  **在 Git 中切换到一个现有分支**
 
 ```bash
 git checkout -
 ```
 
 `git checkout`命令用于切换分支或恢复工作树文件。`git checkout`是git最常用的命令之一，同时也是一个很危险的命令，因为这条命令会重写工作区。
+
+
+
+### 修改已经push了的commit信息
+
+使用**【git commit --amend】**命令，会进入到vim编辑器。
+
+输入***\*【i】\****，即进入编辑模式，此时编辑提交信息。
+
+编辑好之后，按键**【Esc】**，输入**【:wq】**，即保存和退出。
+
+输入**【git push -f】**强制提交。
 
 
 

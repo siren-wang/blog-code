@@ -32,7 +32,7 @@ export default {
   border-radius 3px
   padding 0 6px
   color white
-  background-color #42b983
+  background-color rgba(255,229,100,0.3)
   &.tip, &.green
     background-color $badgeTipColor
   &.error

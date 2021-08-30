@@ -29,7 +29,7 @@
     </div>
     <div :id="pagePath" v-if="isShowReadCount" class="leancloud_visitors" data-flag-title="Your Article Title">
         <i class="icon-eye"></i>
-        <i class="leancloud-visitors-count">--</i>
+        <span class="leancloud-visitors-count">--</span>visited
     </div>
   </div>
 </template>
@@ -103,6 +103,7 @@ export default {
   align-items center
   line-height 2
   flex-wrap wrap
+  font-family var(--theme-font-base)
   > div
     display inline-flex
     align-items center
@@ -118,6 +119,8 @@ export default {
     margin-right 5px
     width 14px
     height 14px
+  span
+    margin-right 0.3rem
 .post-meta--hasCover
   a
     line-height 1.2

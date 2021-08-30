@@ -64,23 +64,22 @@ blockquote
 .mt-7
   margin-top 28px
 h1
-  font-size: 1.78571rem;
+  font-size: 1.88571rem;
 h1,h2,h3,h4,h5,h6
   font-family var(--theme-font-heading)
-  font-weight: 400
   padding-bottom 0
   border-bottom none
   line-height 1.5
   &:focus .header-anchor,
   &:hover 
     .header-anchor
-      opacity: 1
+      opacity: 0.4
 a.header-anchor
-  font-size 0.85em
+  font-size 0.8em
   float left
   margin-left -0.87em
   padding-right 0.23em
-  margin-top 0.125em
+  margin-top 0.2em
   opacity 0
 
   &:focus,
@@ -218,7 +217,7 @@ img {
     font-size .85rem
     opacity .63
     padding-right .5rem
-    font-family var(--theme-font-label) 
+    font-family var(--theme-font-heading) 
   &__title
     font-size 1.15rem
 
@@ -236,7 +235,7 @@ img {
       background var(--theme-accent-color)
       color #ffffff
     > a
-      font-family var(--theme-font-label)
+      font-family var(--theme-font-heading)
       margin: 0 3px;
       padding 0
       text-align center
@@ -282,6 +281,20 @@ img {
   }
 }
 // 评论
+#veditor
+  background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgba(255, 255, 255, 0);
+  resize: vertical
+#vcomments
+  .vwrap
+    border-color: var(--theme-border-color)
+    .vheader
+      input
+        border-bottom: 2px dashed var(--theme-border-color)
+
 .vssue
   color var(--theme-foreground-color)
   opacity .8

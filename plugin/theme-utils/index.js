@@ -18,7 +18,7 @@ const wordcount = function (content) {
 }
 
 module.exports = (options = {}, context) => ({
-  name: 'maker-theme-utils',
+  name: 'theme-utils',
   extendPageData($page) {
     if ($page.path === '/archives/') {
       return $page.pageType = 'archive';

@@ -1,6 +1,6 @@
 ---
 date: 2021-05-17
-category: principles
+category: Principles
 title: 10x Programmer
 ---
 

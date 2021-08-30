@@ -20,6 +20,7 @@ export default {
   .nav-links
     display block
     margin: 2rem 0 3rem;
+    color: #818181;
     .nav-item
       position: relative;
       display: block;
@@ -33,8 +34,8 @@ export default {
       &:hover
         font-size: 1.168rem;
         & > a:after
-          background-color: var(--theme-accent-color);
-          background-image: none;
+          // background-color: var(--theme-accent-color);
+          // background-image: none;
       > a, .dropdown-title
         display block
         line-height 3rem
@@ -43,13 +44,10 @@ export default {
         &:after
           position: absolute;
           top: 50%;
-          right: 0;
-          width: 7px;
-          height: 7px;
-          background: var(--theme-background);
-          border-radius: 50%;
+          right: 1px;
+          width: 3px;
+          height: 2rem;
           content: "";
-          box-shadow: 0 0 0 1px var(--theme-border-color);
           transform: translate(50%,-50%);
         &:not(.external)
           margin-bottom inherit
@@ -82,4 +80,6 @@ export default {
 @media (min-width: $MQMobile)
   .nav-links a:hover, .nav-links a.router-link-active
     color var(--theme-accent-color)
+    & > a:after
+      background-color: var(--theme-accent-color);
 </style>

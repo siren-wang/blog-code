@@ -108,6 +108,32 @@ module.exports = (options, {themeConfig}) => {
       duration: 1000, // prompt message display time.
       showInMobile: false, // whether to display on the mobile side, default: false.
     }],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // Don't forget to install moment yourself
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        },
+        // dateOptions:{
+        //   hour12: false
+        // }
+      }
+    ],
+    // [
+    //   '@vssue/vuepress-plugin-vssue', {
+    //     // 设置 `platform` 而不是 `api`
+    //     platform: 'github',
+    //     // 其他的 Vssue 配置
+    //     owner: 'sirenar',
+    //     repo: 'sirenar.github.io',
+    //     clientId: '3f7642d7b9e8f805db1b',
+    //     clientSecret: '5a6b43fa6ffeeab7f712987b27e185c05cc98df7',
+    //     autoCreateIssue: true
+    //   },
+    // ],
     require('./plugin/demo-code'),
     require('./plugin/theme-utils'),
     require('./plugin/float-menu')
