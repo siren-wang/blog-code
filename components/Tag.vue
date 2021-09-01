@@ -16,6 +16,7 @@ export default {
   background var(--theme-card-background)
   border-radius: 6px;
   padding: 2.15rem;
+  box-shadow: var(--theme-card-boxshadow);
   &__title
     margin 0 0 1.5rem 0
     font-size: 1.78571rem;

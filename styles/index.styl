@@ -281,19 +281,22 @@ img {
   }
 }
 // 评论
-#veditor
-  background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: rgba(255, 255, 255, 0);
-  resize: vertical
+:root.light
+  #veditor
+    background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    resize: vertical
 #vcomments
   .vwrap
     border-color: var(--theme-border-color)
     .vheader
       input
         border-bottom: 2px dashed var(--theme-border-color)
+        &::placeholder
+          color: var(--theme-border-color)
+          font-size: 2em;
 
 .vssue
   color var(--theme-foreground-color)

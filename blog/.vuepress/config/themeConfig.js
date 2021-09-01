@@ -86,6 +86,9 @@ module.exports = {
       verify: false, 
       visitor: true, // 阅读量统计
       placeholder: "快来评论我_(:з」∠)_",
+      meta: ['nick','mail'],
+      lang: 'en',
+      requiredFields: []
     }
   },
 }

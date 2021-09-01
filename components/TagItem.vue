@@ -40,4 +40,5 @@ export default {
   background var(--theme-card-background)
   border-radius: 6px;
   padding: 2.15rem;
+  box-shadow: var(--theme-card-boxshadow);
 </style>
