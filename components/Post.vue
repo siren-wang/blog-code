@@ -126,6 +126,9 @@ export default {
     font-weight: 700;
   code
     font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
+  img
+    width: auto;
+    max-width: 100%;
 .article-content
   a
     // border-bottom: 1px dotted;

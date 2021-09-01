@@ -1,7 +1,6 @@
 <template>
   <div class="theme-main__inner">
     <div class="category" v-for="subject of $category.list" :key="subject.name">
-      <!-- <h1 class="category__title">{{subject.name}}</h1> -->
       <div class="category__title">
         <h1>{{subject.name}}</h1>
       </div>
@@ -41,9 +40,6 @@ export default {
   &__title
     position relative
     line-height 60px
-    // font-family var(--theme-font-heading)
-    // line-height 1.5
-    // font-size 1.88571rem
     z-index 1
     h1
       display inline
