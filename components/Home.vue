@@ -4,7 +4,6 @@
       <div class="article-item" v-for="item in $pagination.pages" :key="item.path">
         <router-link :to="item.path">
           <div v-if="item.frontmatter.cover" :style="{backgroundImage: `url(${item.frontmatter.cover})`}" class="article-cover">
-            <ThemePalette v-if="$themeConfig.palette"/>
             <div class="article-title-wrapper">
               <h1>{{item.title}}</h1>
               <div v-html="item.excerpt"></div>

@@ -7,5 +7,6 @@ export default ({ Vue }) => {
   Vue.config.devtools = true
   Vue.component('FloatMenu', FloatMenu)
   Vue.component('Search', Search)
+  // component('ThemePalette', ThemePalette)
   Vue.prototype.$eventBus = new Vue();
 }

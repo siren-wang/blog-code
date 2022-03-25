@@ -2,7 +2,14 @@
   <div class="theme-palette">
     <span class="theme-palette__emoji"><Icon icon="palette"/></span>
     <div class="theme-palette__list">
-      <a :style="{color: `${item.btnColor}`}" v-for="item in colors" href="javascript:;" :title="item.btnColor" @click.stop="setThemeColors(item)"></a>
+      <a 
+        :style="{color: `${item.btnColor}`}" 
+        v-for="item in colors"
+        :key="item.btnColor"
+        href="javascript:;"
+        :title="item.btnColor" 
+        @click.stop="setThemeColors(item)">
+      </a>
     </div>
   </div>
 </template>
@@ -33,6 +40,7 @@ export default {
   },
   methods: {
     setThemeColors(item){
+      console.log(this.themePaletteBox.innerHTML)
       this.themePaletteBox.innerHTML = `@media (prefers-color-scheme: dark) { html {${item.paletteVars.dark || ''}} } html,html.light {${item.paletteVars.light || ''}} html.dark {${item.paletteVars.dark || ''}}`;
       window.localStorage.setItem('__palette__', this.themePaletteBox.innerHTML);
     }

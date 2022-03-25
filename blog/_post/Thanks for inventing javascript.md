@@ -1,12 +1,10 @@
 ---
 date: 2021-07-08
 category: Javascript
-title: Thanks for inventing javascript
+title: Thanks JavaScript:ProgrammerHumor
 ---
 
 <!-- more -->
-
-## Thanks JavaScript: ProgrammerHumor
 
 祭图：（图片出自[El Bruno的博客](https://elbruno.com/2018/07/01/humor-thanks-for-inventing-javascript/)）
 
@@ -14,6 +12,8 @@ title: Thanks for inventing javascript
 
 ### 1. typeof NaN === “number”
 
+:joy:
+:yum:
 NaN 同 Number.NaN 一样，都是表示 Not A Number。从 Number.NaN 可以推测 NaN 是数字类型。
 
 但实际上 NaN 不是 JavaScript 创造的。[IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) 中将 NaN 定义为一种“特殊”的数字。

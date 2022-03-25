@@ -1,7 +1,7 @@
 <template>
   <div class="theme-main__inner theme-tag">
     <div class="theme-tag__list">
-      <h2 class="theme-tag__title">{{$tag.list.length}} tags in total</h2>
+      <h2 class="theme-tag__title">{{$tag.list.length}} Tags In Total</h2>
       <router-link class="theme-tag__link" v-for="tag in $tag.list" :key="tag.name" :to="tag.path"># {{ tag.name }}</router-link>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
   &__title
     margin 0 0 1.5rem 0
     font-size: 1.78571rem;
-    font-weight normal
+    font-weight bold
   &__link
     display inline-block
     background var(--theme-accent-color-005)

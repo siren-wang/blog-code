@@ -31,6 +31,47 @@ module.exports = {
     }
   ],
   copyright: '© 2021 ❤️ <a target="_blank" href="#">Siren Wang</a>',
+  palette: { colors: [
+    {
+      btnColor: '#ffa1a1',
+      paletteVars: 
+      {
+        dark: 
+          '--theme-accent-color: #ffa1a1',
+        light: 
+          '--theme-accent-color: #ffa1a1',
+      },
+    }, 
+    {
+      btnColor: '#d8caaf',
+      paletteVars: 
+      {
+        dark: '--theme-accent-color: #d3d4cc',
+        light: '--theme-accent-color: #d3d4cc',
+      },
+    }, 
+    {
+      btnColor: '#965455',
+      paletteVars: 
+      {
+        dark: '--theme-accent-color:#965455',
+        light: '--theme-accent-color:#965455',
+      },
+    },{
+      btnColor: '#6b5152',
+      paletteVars: 
+      {
+        dark: '--theme-accent-color: #6b5152',
+        light: '--theme-accent-color: #6b5152',
+      },
+    },{
+      btnColor: '#7a7281',
+      paletteVars: 
+      {
+        dark: '--theme-accent-color: #7a7281',
+        light: '--theme-accent-color: #7a7281',
+      },
+    }] },
   blog: {
     directories: [
       {
@@ -77,7 +118,6 @@ module.exports = {
     feed: {
       // canonical_base: 'http://80shuo.com',
     },
-    palette: {},
     comment: {
       service: 'valine',
       appId: 'yjSOq361A6Hu4FGqG2m8Ln8f-gzGzoHsz',

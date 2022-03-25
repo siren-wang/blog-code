@@ -10,7 +10,7 @@
             alt="logo"
             width="160"
             height="160"/>
-            <ThemePalette v-if="$themeConfig.palette"/>
+          <ThemePalette v-if="$themeConfig.palette"/>
         </RouterLink>
         <RouterLink class="theme-header__name" to="/">
           {{$site.title}}
@@ -102,7 +102,8 @@ export default {
     background-size: 400%;
     -webkit-background-clip: text;
     color: transparent;
-    &:hover
+  &:hover
+    .theme-header__name
       -webkit-animation: run 30s linear 0s infinite;
       animation: run 30s linear 0s infinite;
   &__slogan
@@ -112,8 +113,4 @@ export default {
   @keyframes run { 
     100% { background-position: 400% 0px; } 
   }
-// @keyframes slidetounlock{
-// 	0%  { background-position: 0 0;}
-//   100% { background-position: -150% 0;}
-// }
 </style>

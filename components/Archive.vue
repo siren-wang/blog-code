@@ -26,7 +26,6 @@ export default {
     archiveList() {
       let res = {};
       let tmp = [];
-      console.log('site: ',this.$site);
       let list = this.$site.pages.filter(item => {
         return item.pid === 'post';
       });
@@ -62,29 +61,28 @@ export default {
 </script>
 <style lang="stylus">
 .archive
-  border-radius 6px
-  padding 2.15rem
   border-color var(--theme-border-color)
   background var(--theme-card-background)
-  box-shadow var(--theme-card-boxshadow)
   &__list
     margin 0
     padding-left 0
     list-style none
     border-color inherit
   &__item
-    &:first-child
-      margin-top -2.15rem
-    &:last-child
-      margin-bottom -2.15rem
-      padding-bottom 6rem
     border-color inherit
     position relative
-    padding 2.15rem 0
+    border-radius 6px
+    padding 2.15rem
+    box-shadow var(--theme-card-boxshadow)
+    margin 3rem 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      padding-bottom 6rem
     &:before
       position absolute
       top 0
-      left 1.5rem
+      left 3.7rem
       height 100%
       border-left 1px solid
       border-color inherit

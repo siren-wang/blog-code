@@ -1,7 +1,7 @@
 ---
 date: 2021-07-23
 title: Theme Markdown 语法示例
-category: javascript
+category: Javascript
 tags:
   - VuePress
 ---
@@ -280,7 +280,7 @@ VuePress 使用了 [Prism](https://prismjs.com/) 来为 markdown 中的代码块
 **输入**
 
 ````
-​``` js
+``` js
 export default {
   name: 'MyComponent',
   // ...
@@ -290,7 +290,7 @@ export default {
 
 **输出**
 
-​``` js
+``` js
 export default {
   name: 'MyComponent',
   // ...
@@ -309,7 +309,7 @@ export default {
     {{ todo.text }}
   </li>
 </ul>
-​``` -->
+``` -->
 ````
 
 **输出**

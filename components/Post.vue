@@ -105,8 +105,9 @@ export default {
   line-height 1.8
   color var(--theme-foreground-color)
   box-shadow: var(--theme-card-boxshadow)
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  // font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  // font-family: Monaco,Consolas,andale mono,dejavu sans mono,monospace
+  // font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: Verdana, sans-serif, -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   h2
     font-size: 2.2rem;
     border-bottom: 1px solid var(--theme-h2-decorate);
@@ -115,6 +116,8 @@ export default {
     margin: 3rem 0 1rem;
   h4
     font-size: 1.2rem;
+  h5
+    font-weight bold;
   mark
     background-color #fbb972;
     padding: 0.2em;
@@ -128,7 +131,9 @@ export default {
     font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
   img
     width: auto;
-    max-width: 100%;
+    max-width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
 .article-content
   a
     // border-bottom: 1px dotted;
@@ -149,20 +154,9 @@ export default {
   background-size: cover;
   color: rgb(255, 255, 255);
   position relative;
-  // background-color: rgba(64,64,64,.2zz8);
-  // background-image: var(--bg-image);
-  // 'background-color': this.$frontmatter.coverBgColor
   &:after
-    // position absolute
     z-index 1
-    // border-radius 2em
-    // left 0
-    // top 0
-    // right 0
-    // bottom 0
     content ''
-    // opacity .63
-    // transition opacity .4s
     background-color: rgba(64,64,64,.28);
 .article__header-con
   padding: 2.5rem 2.15rem 1rem;
@@ -180,10 +174,8 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  // background-size: 100%;
   background-position: 50% center;
   background-size: cover;
-  // background-color: rgba(64,64,64,.28);
   ul
     margin 0
     padding-left 0

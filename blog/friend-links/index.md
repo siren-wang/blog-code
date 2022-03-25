@@ -11,6 +11,6 @@ cover: /images/pexels-lisa-1083822.jpeg
 #     logo: https://www.17ria.com/themes/fruit/assets/images/safari-pinned-tab.svg
 #     url: https://www.17ria.com/
 #     desc: 承载最初的简单梦想，记录前端路上的点点滴滴~
-# ---
+---
 
 ### 友链申请

@@ -45,6 +45,13 @@ export default {
 <style lang="stylus">
 .valine-box
   .v[data-class=v]
+    button
+      &:hover
+        background-color var(--theme-accent-color)
+        border-color: var(--theme-accent-color)
+        color white
+    .vicon.actived
+       fill var(--theme-accent-color-08)
     a
       color var(--theme-foreground-color)
       &:hover

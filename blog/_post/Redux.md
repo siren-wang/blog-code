@@ -10,7 +10,7 @@ title: Redux基础
 
 Redux 的核心概念是，组件发出 action 与状态管理器通信。状态管理器收到 action 以后，使用 Reducer 函数算出新的状态，Reducer 函数的形式是 `(state, action) => newState`
 
-![redux flow](/Users/mac/Documents/image/redux flow.webp)
+![redux flow](/images/redux flow.webp)
 
 由于 Reducer 是纯函数，就可以保证同样的State，必定得到同样的 View。但也正因为这一点，Reducer 函数里面不能改变 State，必须返回一个全新的对象。
 
