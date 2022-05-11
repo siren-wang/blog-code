@@ -35,6 +35,8 @@ conclusively
 
 on top of
 
+in degree and intensity
+
 making the most of what you have.
 
 pronounced effect 效果显著
@@ -53,6 +55,8 @@ at the expense of spending time with real-life family and friends.
 
 There’s not a single person on the planet who wouldn’t like to ...
 
+With every choice, something is gained and something is lost.
+
 lower revenue
 
 call in sick or come in late
@@ -70,6 +74,8 @@ form rapport and solidarity
 oriented to do the right thing
 
 lead to customer satisfaction, and ultimately, to customer loyalty.
+
+be nice and comfy.
 
 The mass media have become an inseparable part of society and the lives of citizens and that’s why it is necessary to understand the mass media influence on people. From economy to entertainment and from politics to beauty, everything is now influenced by mass media.
 

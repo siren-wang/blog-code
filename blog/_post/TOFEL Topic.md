@@ -442,7 +442,7 @@ Like a tree, poverty has many roots. Among the many causes of global poverty, on
 
 ##### Secure Better Jobs
 
-While vocational training centers on hard skills, college primarily teaches soft skills, such as creativity, communication, and leadership. These skills tend to stay relevant over time, whereas hard skills risk becoming obsolete.
+While vocational training centers on hard skills, college primarily teaches soft skills, such as creativity, communication, and leadership. These skills tend to <u>stay relevant over time,</u> whereas hard skills risk becoming obsolete.
 
 ##### As a Human Right
 

@@ -52,19 +52,3 @@ title: Documents about AI application in Bone Age Evaluating
 X光影像图片判断
 
 His系统接口读取挂号数据
-
-
-
-
-
-
-
-我登录不上去，然后把它卸载了重新区官网下载安装了，然后还是
-
-
-
-
-
-I had classes in Xinhangdao, a staff there introduced the program to me and suggested me apply.
-
-？怎么了

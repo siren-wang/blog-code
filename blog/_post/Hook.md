@@ -11,7 +11,7 @@ cover: /images/react-hooks-best-practices-lead_.jpeg
 
 > *Hook* 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 >
-> *Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+> React Hooks are a new(-ish) way of using state and other React features without writing a class, and in general, keeping code much simpler to understand and share.
 
 **Hooks allow you to reuse stateful logic without changing your component hierarchy.** 
 
