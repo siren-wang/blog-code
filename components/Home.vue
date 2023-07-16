@@ -6,9 +6,8 @@
         ref="myVideo"
         :poster="poster"
         :src="require('assets/images/impression.mp4')"
-        :controls="controls"
         autoplay
-        muted
+        defaultMuted
         loop
       ></video>
       <div class="welcome-phrase">
@@ -16,7 +15,24 @@
         <div>Glad to have you here.</div>
         <div class="notes">I'm a <span>front-end developer</span> based in Chengdu, China. 
         </div>
-        <!-- <div class="notes">Don't put me in a box.</div> -->
+      </div>
+    </div>
+    <h1 class="block-title">Projects Made</h1>
+    <div class="project" v-for="project in projects" :key="index">
+      <div class="article-item">
+        <a href="https://sirenar.github.io/graduate-project-baa/" target="_blank">
+          <img :src="project.img">
+        </a>
+      </div>
+      <div class="project-brief">
+        <h2>{{ project.title }}</h2>
+        <span>{{ project.des }}</span>
+        <div class="tags-box">
+          <div v-for="tag in project.tags">{{ tag }}</div>
+        </div>
+        <div class="visit">
+          <a href="https://sirenar.github.io/graduate-project-baa/" target="_blank">Visit it ></a>
+        </div>
       </div>
     </div>
     <div class="article-list">
@@ -58,6 +74,19 @@ export default {
   name: 'Home',
   components: {
     Pagination
+  },
+  data() {
+    return {
+      projects: [
+        {
+          title: 'Medical system for short stature diagnosis',
+          img: require('assets/images/medicalDashboard.png'),
+          des: 'The system is designed to help healthcare providers identify the underlying cause of short stature and develop an appropriate treatment plan to help the person achieve their full growth potential.',
+          url: 'https://sirenar.github.io/graduate-project-baa/',
+          tags: ['Computer Vision', 'Attention Map']
+        }
+      ]
+    }
   },
   methods: {
     formateDate(val) {
@@ -169,6 +198,46 @@ export default {
       
   video
     width: 100%;
-  img
-    width: 300px;
+
+h1.block-title
+  position: relative;
+  padding-left: 30px;
+  &:before
+    content: '';
+    background-color: var(--theme-accent-color);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 12px;
+    height: 24px;
+    transform: translateY(-50%);
+
+.project
+  display: flex;
+  line-height: 1.5;
+  .article-item
+    width: 40%;
+    cursor: pointer;
+  .project-brief
+    margin: 0 5%;
+    flex: 1;
+    h2
+      text-transform: capitalize;
+  .tags-box
+    margin: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    div
+      padding: 2px 10px;
+      background: var(--theme-accent-color-02);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-right: 8px;
+      cursor: pointer;
+      &:hover
+        background: var(--theme-accent-color-04)
+  .visit a
+    color: var(--theme-accent-color) !important;
+    font-weight: 800;
 </style>
