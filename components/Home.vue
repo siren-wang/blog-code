@@ -240,4 +240,12 @@ h1.block-title
   .visit a
     color: var(--theme-accent-color) !important;
     font-weight: 800;
+  
+@media (max-width: $MQMobile)
+  .project, .block-title
+    display: block;
+    margin: 1rem;
+    .article-item
+      width: 100%;
+      margin: 0 !important;
 </style>
