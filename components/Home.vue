@@ -1,5 +1,24 @@
 <template>
   <div class="theme-main__inner home">
+    <div class="article-item myself">
+      <!-- <img :src="require('assets/images/selfie.png')"> -->
+      <video
+        ref="myVideo"
+        :poster="poster"
+        :src="require('assets/images/impression.mp4')"
+        :controls="controls"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="welcome-phrase">
+        <div>Hey, I'm <span>Siren.</span></div>
+        <div>Glad to have you here.</div>
+        <div class="notes">I'm a <span>front-end developer</span> based in Chengdu, China. 
+        </div>
+        <!-- <div class="notes">Don't put me in a box.</div> -->
+      </div>
+    </div>
     <div class="article-list">
       <div class="article-item" v-for="item in $pagination.pages" :key="item.path">
         <router-link :to="item.path">
@@ -33,6 +52,7 @@ import dayjs from 'dayjs'
 import dayjsPluginUTC from 'dayjs/plugin/utc'
 
 dayjs.extend(dayjsPluginUTC)
+
 const DATE_MAP = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 export default {
   name: 'Home',
@@ -111,4 +131,44 @@ export default {
   opacity: .63;
   [class^="icon-"]
     margin-right 0.4rem
+
+.myself
+  display: inline-flex;
+  position relative;
+  // &:after, .welcome-phrase
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  // &:after
+  //   content: '';
+  //   background: rgba(0, 0, 0, .5);
+  .welcome-phrase
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4vw;
+    font-weight: 800;
+    color: white;
+    font-family: var(--theme-font-logo);
+    padding: 0 10%;
+    transition: opacity 1s cubic-bezier(0.25,0.1,0.25,1);
+    span
+      color: var(--theme-accent-color);
+    .notes
+      font-size: 1.5vw;
+      font-weight: 800;
+      color: #ddd
+      margin-top: 12px;
+      font-family: var(--theme-font-heading);
+    &:hover
+      opacity: 0;
+      
+  video
+    width: 100%;
+  img
+    width: 300px;
 </style>

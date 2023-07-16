@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'I\'m Siren',
+  title: 'Siren\'s playground',
   description: 'Paint the world colorful.',
   port: 8088,
   markdown: {

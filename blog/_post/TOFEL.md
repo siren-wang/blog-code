@@ -83,7 +83,7 @@ Nothing extraordinary can come from playing it safe.
 
  immense(enormous, intense) pressure
 
-it can be difficult to find up-to-date best practices. 要想找到最新的最佳实践可能很困难。
+it can be difficult to find up-to-date best practices.
 
 in our haste to be rich and mighty
 
@@ -168,6 +168,8 @@ Our speech and habits as well as our behavior should not hurt the feelings of ot
 我们的言谈习惯和行为不应该伤害他人的感情或给他们带来任何不便。
 
 customers simply slip always from their hands. 客户从他们手中滑落。
+
+
 
 
 
@@ -435,8 +437,6 @@ Friendship is free. There is no cost to sharing a laugh, having someone to talk 
 
 
 Being able to see the big picture is important in many areas of life. Whether it’s your personal life or a work project, it’s easy to get bogged down and lost in the details. Being creative and letting your mind meander a bit is like taking a walk in the forest. Rather than stopping to focus on one piece of moss, keep wandering down the path and open up the forest. You’re able to see past the trees, in a way.
-
-能够看到大局在生活的许多领域都很重要。无论是您的个人生活还是工作项目，很容易陷入困境并迷失在细节中。
 
 
 

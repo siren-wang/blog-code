@@ -45,8 +45,6 @@ export default {
   top 0
   bottom 0
   left 0
-  border-right 1px solid
-  border-color var(--theme-border-color)
   &__inner
     display: flex;
     flex-direction column
@@ -93,8 +91,11 @@ export default {
           border-color rgb(120,120,120)
   &__name
     font-family: var(--theme-font-logo);
+    text-transform: capitalize;
+    font-weight: 800;
     display block;
     margin: 1.5rem;
+    padding: 0 30px;
     font-size: 1.714285rem;
     transition: color .15s;
     position: relative;

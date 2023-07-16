@@ -8,6 +8,11 @@ title: Webpack常用loader
 
 <!-- more -->
 
+
+> 开箱即用，webpack 不需要您使用配置文件。但是，它将假定您的项目的入口点是 `src/index.js` 并将输出结果在 `dist/main.js` 中，为生产进行了缩小和优化。
+> 
+> Out of the box, webpack won't require you to use a configuration file. However, it will assume the entry point of your project is `src/index.js` and will output the result in `dist/main.js` minified and optimized for production.
+
 webpack是基于入口的。webpack会自动地递归解析入口所需要加载的所有资源文件，然后用不同的Loader来处理不同的文件，用Plugin来扩展webpack功能。
 
 

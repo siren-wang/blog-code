@@ -23,9 +23,9 @@ All living things are composed of cells.
 
 The neuron is a nerve cell and is the primary functional unit of the ==nervous system==. 
 
-![](/images/Neuron_cell_body.png)
+![][image-1]
 
-#### Dendrites 
+#### Dendrites
 
 The structures that look a little bit like tree branches are called dendrites. Dendrites are the area where neurons receive most of their information. There are receptors on dendrites that pick up signals from other neurons that come in form of chemicals called <u>neurotransmitters</u>. 
 
@@ -43,7 +43,7 @@ The signal travels down the axon. When the signal reaches the axon terminals, wh
 
 ### Plant cell
 
-![plant cell](/images/plant-cell.png)
+![plant cell][image-2]
 
 
 
@@ -53,34 +53,34 @@ Ecology is the study of the relationships between living organisms, including hu
 
 ### Population Ecology
 
-| Term               | Meaning                                                      |
-| ------------------ | ------------------------------------------------------------ |
-| Population         | A group of individuals that belong in the <u>same species</u> and live in the <u>same area.</u> |
+| Term               | Meaning                                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Population         | A group of individuals that belong in the <u>same species</u> and live in the <u>same area.</u>                                           |
 | Population ecology | The ecological study of how biotic (living) and abiotic (non-living) factors influence the density, dispersion, and size of a population. |
 
 ### Community Ecology
 
 Community ecology looks at how bunches of living things interact with each other.
 
-![](/images/levels_of_biological_organization_community.jpg)
+![][image-3]
 
 **Types of Interspecific Interaction**
 
-| Type of interaction | General nature of Interaction                                | Effection |
-| ------------------- | ------------------------------------------------------------ | :---------: |
-| Mutualism           | Both species benefit from interaction, such as bacteria in the gut that speed digestion. | +/+       |
+| Type of interaction | General nature of Interaction                                                                 | Effection |
+| ------------------- | --------------------------------------------------------------------------------------------- | :-------: |
+| Mutualism           | Both species benefit from interaction, such as bacteria in the gut that speed digestion.      | +/+       |
 | Commensalism        | One species benefits without affecting the other, such as a spider spinning a web on a plant. | +/0       |
-| Parasitism          | One species benefits, but the other is harmed, such as pathogenic microbes. | +/-       |
-| Predation           | One species preys on the other for survival.                 | +/-       |
-| Competition         | Two species fight over limited resources.                    | -/-       |
+| Parasitism          | One species benefits, but the other is harmed, such as pathogenic microbes.                   | +/-       |
+| Predation           | One species preys on the other for survival.                                                  | +/-       |
+| Competition         | Two species fight over limited resources.                                                     | -/-       |
 
-### Ecosystem Ecology 
+### Ecosystem Ecology
 
 Ecosystem ecology is the study of the living and nonliving components within the environment, how these factors interact with each other, and how both natural and human-induced changes affect how they function. 
 
 Ecosystem ecology looks at how ==energy and materials== come into an ecosystem, move around in it, and then get spat back out.
 
-![Ecosystem compounds](/images/ecosystem-components.png)
+![Ecosystem compounds][image-4]
 
 
 
@@ -102,7 +102,8 @@ Saprophytes undergo extracellular digestion to digest the dead and decaying matt
 
 We classify ecosystems into biomes, or habitats with similar characteristics. 
 
-![](/images/global-biomes.png)
+
+![][image-5]
 
 
 
@@ -110,3 +111,9 @@ We classify ecosystems into biomes, or habitats with similar characteristics.
 
 
 ## Evolution & Genetics
+
+[image-1]:	/images/Neuron_cell_body.png
+[image-2]:	/images/plant-cell.png
+[image-3]:	/images/levels_of_biological_organization_community.jpg
+[image-4]:	/images/ecosystem-components.png
+[image-5]:	/images/global-biomes.png

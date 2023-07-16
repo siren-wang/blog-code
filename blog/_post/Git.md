@@ -35,7 +35,7 @@ git add 将内容写入暂存区
 $ git add "File A" "File D"
 ```
 
-- If the file name/path has a space, wrap it in quotes. 
+- If the file name/path has a space, wrap it in quotes.
 
   修改了4个文件，在不放弃任何修改的情况下，其中一个文件不想提交，如何操作？（没add : git add 已经add: git reset --soft ）
   修改到一半的文件，突然间不需要或者放弃修改了，怎么恢复未修改前文件？ (git checkout)
@@ -62,7 +62,7 @@ $ git rm example.html to remove a file (and stage it)
 $ git rm -r myfolder** to remove a folder (and stage it)
 ```
 
-### git commit 
+### git commit
 
 ```bash
 $ git commit -m "Message that describes what this change does"
@@ -124,7 +124,7 @@ $ git checkout dev
 Switched to branch 'dev'
 ```
 
-###  **在 Git 中切换到一个现有分支**
+### **在 Git 中切换到一个现有分支**
 
 ```bash
 git checkout -
@@ -151,3 +151,13 @@ git checkout -
 Merge conficts occur when two branches modifies the same hunk of the same file. To make merging easier, avoid making a lot of changes over a long period of time without merging. Smaller, frequent merges are usually the best aproach.
 
 > In some ways, the number and complexity of merge conflicts is a test of how moduler your code is.
+
+git pull –rebase
+a.把你 commit 到本地仓库的内容，取出来放到暂存区(stash)（这时你的工作区是干净的）
+b.然后从远端拉取代码到本地，由于工作区是干净的，所以不会有冲突
+c.从暂存区把你之前提交的内容取出来，跟拉下来的代码合并
+
+> 所以 rebase 在拉代码前要确保你本地工作区是干净的，如果你本地修改的内容没完全 commit 或者 stash，就会 rebase 失败。
+![][image-1]
+
+[image-1]:	/images/git-pull-rebase.png

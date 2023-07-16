@@ -124,11 +124,14 @@ explain concepts and clarify any doubts you have
 
 Our past is a treasure chest filled with learning opportunities for our present and future, but only if we look inside. Experience, also called empirical knowledge gives us the tools to analyze and explain problems in the past. 
 
-And It positions us to see patterns that might otherwise be invisible in the present, thus providing a crucial perspective for understanding and solving current and future problems. 
+**Provides perspective**. And It positions us to see patterns that might otherwise be invisible in the present, thus providing a crucial perspective for understanding and solving current and future problems. 
+
+Rather than a dry collection of names and dates, the history tell us about the import intersection of time and place that defines who we are. (make sense of how it has grown and developed.)
 
 As a result, it helps us become more impartial and thoughtful as decision-makers.
 
 > "Those who cannot learn from history are bound(doomed/condemned) to repeat it."  — Spanish philosopher George Santayana
+> Consider what happens when you meet someone for the first time. The conversation usually begins with a series of questions such as, “Where did you grow up?””How long have you lived here?”“Where did you go to school?” The importance of history in defining who we are cannot be overstated.
 
 
 
@@ -268,7 +271,16 @@ Intelligence doesn’t guarantee success in our social life either,in fact being
 
 
 
+#### Speak Up
 
+> The courage to speak up for what is right is a virtue that the majority of us like to believe we possess. When push comes to shove, however, many people end up looking the other way.
+
+
+#### Practice humility
+
+Remember that there is a delicate balance between being speaking up in a way that's inclusive versus speaking up in a way that's overpowering. You refine your voice further by understanding the difference.
+
+An inclusive voice shows both confidence and humility. Confidence doesn't mean that you hold your ground and aren't open to criticism. Nor does confidence mean that your idea is the best idea. It means that your arguments and logic are backed by supporting rationale, evidence, facts, and persuasive examples.
 
 ### Art
 
@@ -316,7 +328,7 @@ Waiting, even if we're forced to do it, actually teaches us the value of patienc
 
 - Experiencing genuine happiness instead of immediate short term pleasure.
 
-  
+	  
 
 ### Modern Society
 
@@ -334,7 +346,7 @@ We live in a society based on instant gratification. Hungry? A microwave will ha
 
 (The way the world has changed in the past 50 years(five decades) has been absolutely staggering. )The force of technology permeates into almost every facet of 21st century life, from transport efficiency and safety, to access to food and healthcare, socialization and productivity. The power of the internet has enabled global communities to form and ideas and resources to be shared at nearly no cost.
 
-While mankind has been able to build the impossible, there are more times than one when we have also created potential or even real catastrophes. (However, the overuse of some technology has been linked to a decline in mental health, increased [social division](https://tech.co/news/robots-ruining-world-2020-07) and [privacy concerns](https://tech.co/news/worst-security-threats-2021).)
+While mankind has been able to build the impossible, there are more times than one when we have also created potential or even real catastrophes. (However, the overuse of some technology has been linked to a decline in mental health, increased [social division][1] and [privacy concerns][2].)
 
 As beneficiaries of the greatest innovation(information) boom in the history of the world, ...
 
@@ -481,7 +493,7 @@ They’re a convenient measurement tool that is easy to manage, store, and trans
 
 
 
-#### Teaching Stategy
+#### Teaching Strategy
 
 ##### Clear Regulations & Expectations
 
@@ -542,6 +554,24 @@ Stabilizing global temperature near its current level requires eliminating all e
 #### Decrease biodiversity
 
 
+### Economy
+
+#### Why tax
+
+To help fund public works and services—and to build and maintain the infrastructure used in a country
+
+#### Tourism Industry
+
+Tourism offers great opportunities for emerging economies and developing countries. It creates jobs, strengthens the local economy, contributes to local infrastructure development and can help to conserve the natural environment (biodiversity) and cultural assets and traditions, and to reduce poverty and inequality.
+
+
+::: details
+
+In 2019, tourism accounted for about ten per cent of global GDP (gross domestic product).
+
+:::
+
+
 
 ### Child-rearing
 
@@ -589,11 +619,17 @@ Children raised with pets show many benefits. Developing positive feelings about
 
 
 
-You cannot “judge a book by its cover” as they say. It is the persons personality, ethos that matters, not their choice of clothes. Clothes can give indications as to colour preferences, style, if they are reserved, or flamboyant for example but quite honestly the clothes is only a snapTshot of that particular persons choice at that time and what they wanted to wear at that time. It does not tell you about the real them.
+You cannot “judge a book by its cover” as they say. It is the persons personality, ethos that matters, not their choice of clothes. Clothes can give indications as to color preferences, style, if they are reserved, or flamboyant for example but quite honestly the clothes is only a snapshot of that particular persons choice at that time and what they wanted to wear at that time. It does not tell you about the real them.
 
 
 
-### Legislations
+### Legislation
 
-Countries have introduced legislations but they are not effectively implemented because of corruption and economic problems.
+Countries have introduced legislation but they are not effectively implemented because of corruption and economic problems.
 
+### 
+
+
+
+[1]:	https://tech.co/news/robots-ruining-world-2020-07
+[2]:	https://tech.co/news/worst-security-threats-2021

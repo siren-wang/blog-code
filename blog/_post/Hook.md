@@ -2,7 +2,7 @@
 date: 2021-08-23
 category: React
 title: React Hooks
-cover: /images/react-hooks-best-practices-lead_.jpeg
+cover: /images/react-hooks-best-practices-lead\_.jpeg
 ---
 
 <!-- more -->
@@ -10,14 +10,14 @@ cover: /images/react-hooks-best-practices-lead_.jpeg
 ## 类组件与函数组件
 
 > *Hook* 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
->
+> 
 > React Hooks are a new(-ish) way of using state and other React features without writing a class, and in general, keeping code much simpler to understand and share.
 
 **Hooks allow you to reuse stateful logic without changing your component hierarchy.** 
 
 
 
-Redux 的作者 Dan Abramov [总结](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)了组件类的几个缺点：
+Redux 的作者 Dan Abramov [总结][1]了组件类的几个缺点：
 
 - 大型组件很难拆分和重构，也很难测试。
 - 业务逻辑分散在组件的各个方法之中，导致重复逻辑或关联逻辑。
@@ -38,15 +38,15 @@ React 中类组件和函数组件的差异，就表象来说可以说很多条
 - 类组件可以获取实例化的 this，并且基于 this 做各种操作，函数组件不行
 - 类组件内部可以定义并维护 state， 函数组件都称为无状态了，肯定不行
 
-引用 Dan 的一篇文章 [函数式组件与类组件有何不同？](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)其本质上的区别是：
+引用 Dan 的一篇文章 [函数式组件与类组件有何不同？][2]其本质上的区别是：
 
 > 函数组件捕获渲染时的值。
->
+> 
 > **Function components capture the rendered values.**
 
 怎么理解这句话呢？
 
-我们都知道，React 框架有一个经典的公式是`UI = f(data)`，React框架做的本质工作就是吃入数据，吐出UI，把声明式的代码转换为命令式的 DOM 操作，把数据层面的描述映射到用户可见的 UI 变化中去。这也就是说React的数据应该紧紧的和渲染绑定在一起，但是问题的关键就在于**类组件做不到这一点**。 [DEMO](https://link.zhihu.com/?target=https%3A//codesandbox.io/s/pjqnl16lm7)
+我们都知道，React 框架有一个经典的公式是`UI = f(data)`，React框架做的本质工作就是吃入数据，吐出UI，把声明式的代码转换为命令式的 DOM 操作，把数据层面的描述映射到用户可见的 UI 变化中去。这也就是说React的数据应该紧紧的和渲染绑定在一起，但是问题的关键就在于**类组件做不到这一点**。 [DEMO][3]
 
 看一下这样的组件：
 
@@ -70,7 +70,7 @@ class ProfilePage extends React.Component {
 
 看上去好像是没有什么问题，但是如果你在Dan用户下点击 follow按钮，并且在三秒内把用户切换到 Sophie， 最终弹出的提示框会变成 ‘Followed Sophie’，这明显很不合理。
 
-![image](/images/v2-386a449110202d5140d67336a0ade5a0_b.gif)
+![image][image-1]
 
 这个现象有点奇怪，user 是通过 props 下发的，props不可改变，那么造成数据改变的原因就一定是 this 指向改变了。
 真正的原因也确实如此，虽然 props 不可改变，但是 this 是可变的，**this.props 的每次调用都会去获取最新的 this 值，这也是 React 保证数据实时性的重要手段。**
@@ -157,7 +157,7 @@ You’ve “captured” props at the time of render.
 
 > 很多人认为在函数组件中延迟输出的 state 是调用时的 state，而不是最新的 state 是一个Bug，恰恰相反，这是一个函数式组件的特性，是真正践行了React设计理念的正确方式。
 
-在函数式组件中，你也可以拥有一个在所有的组件渲染帧中共享的可变变量。它被成为 [useRef (jump to title)](#useref) 。
+在函数式组件中，你也可以拥有一个在所有的组件渲染帧中共享的可变变量。它被成为 [useRef (jump to title)][4] 。
 
 
 
@@ -204,7 +204,7 @@ function Example() {
 }
 ```
 
-> 与 `componentDidMount` 或 `componentDidUpdate` 不同，使用 `useEffect` 调度的 effect 不会阻塞浏览器更新屏幕，这让你的应用看起来响应更快。大多数情况下，effect 不需要同步地执行。在个别情况下（例如测量布局），有单独的 [`useLayoutEffect`](https://zh-hans.reactjs.org/docs/hooks-reference.html#uselayouteffect) Hook 供你使用，其 API 与 `useEffect` 相同。
+> 与 `componentDidMount` 或 `componentDidUpdate` 不同，使用 `useEffect` 调度的 effect 不会阻塞浏览器更新屏幕，这让你的应用看起来响应更快。大多数情况下，effect 不需要同步地执行。在个别情况下（例如测量布局），有单独的 [`useLayoutEffect`][5] Hook 供你使用，其 API 与 `useEffect` 相同。
 
 
 
@@ -303,7 +303,7 @@ function App() {
 
 ### useMemo
 
-返回一个 [memoized](https://en.wikipedia.org/wiki/Memoization) 值。仅会在依赖项改变时重新计算 memoized 值，从而避免每次渲染时都进行高开销的计算。
+返回一个 [memoized][6] 值。仅会在依赖项改变时重新计算 memoized 值，从而避免每次渲染时都进行高开销的计算。
 
 ```javascript
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
@@ -370,7 +370,7 @@ export default Blub;
 - ObjectFoo会重新渲染，bar和baz是引用类型，虽然值没变，但是与原先不一样，故会重新渲染
 - MemoFoo不会重新渲染，这就是useMemo起作用的地方
 
-在打印台只有第二种情况"obj"变打印出来，可以点击[这里](https://link.juejin.cn?target=https%3A%2F%2Fcodepen.io%2Feastling%2Fpen%2FOJJYPYY)试验。
+在打印台只有第二种情况"obj"变打印出来，可以点击[这里][7]试验。
 
 **你可以把 `useMemo` 作为性能优化的手段，但不要把它当成语义上的保证。**（不要相信它一定会记住上一次的缓存值。） 将来，React 可能会选择“遗忘”以前的一些 memoized 值，并在下次渲染时重新计算它们，比如为离屏组件释放内存。
 
@@ -380,7 +380,7 @@ export default Blub;
 
 ### useCallback
 
-返回一个 [memoized](https://en.wikipedia.org/wiki/Memoization) 回调函数。适用于将该回调函数传递给子组件，且子组件使用引用相等性避免非必要渲染（例如 `shouldComponentUpdate` ）的情况。
+返回一个 [memoized][8] 回调函数。适用于将该回调函数传递给子组件，且子组件使用引用相等性避免非必要渲染（例如 `shouldComponentUpdate` ）的情况。
 
 ```js
 const memoizedCallback = useCallback(
@@ -400,11 +400,9 @@ const memoizedCallback = useCallback(
 
 
 ### useRef
-
-函数组件每次渲染都会被执行，函数内部的局部变量一般会重新创建，而利用 `useRef` 可以访问上次渲染的变量，实现类似[类组件的实例变量](#函数组件和类组件的区别)效果。具体用途：
+函数组件每次渲染都会被执行，函数内部的局部变量一般会重新创建，而利用 `useRef` 可以访问上次渲染的变量，实现类似[类组件的实例变量][9]效果。具体用途：
 
 * 函数组件访问DOM元素；
-
 * 函数组件访问之前渲染变量。
 
 ```js
@@ -459,11 +457,11 @@ function Minus() {
 
 1. 首次渲染，即第一次执行，输出：
 
-   ```javascript
-   ref.current=null
-   dep[ref.current] > Num: 0
-   dep[minus]> Num: 0
-   ```
+```javascript
+ref.current=null
+dep[ref.current] > Num: 0
+dep[minus]> Num: 0
+```
 
    渲染阶段， ref 尚未挂载到 DOM 元素，因此输出 null，且 `#1 uesEffect` 依赖项判定为null。
 
@@ -471,24 +469,24 @@ function Minus() {
 
 2. 点击[Add]，即第二次执行，输出：
 
-   ```javascript
-   ref.current=Num: 0
-   dep[ref.current] > Num: 1
-   dep[minus]> Num: 1
-   ```
+```javascript
+ref.current=Num: 0
+dep[ref.current] > Num: 1
+dep[minus]> Num: 1
+```
 
-   渲染阶段，ref 元素内容并未修改（重渲染），因此输出上次渲染的值。` #1 uesEffect` 的依赖项判定从 null 变为了 `<h1>Num: 0<h1>` （上次渲染的值）。
+   渲染阶段，ref 元素内容并未修改（重渲染），因此输出上次渲染的值。`#1 uesEffect` 的依赖项判定从 null 变为了 `<h1>Num: 0<h1>` （上次渲染的值）。
 
    渲染后，由于 useEffect 的依赖项均发生了变化，因此继续执行。
 
 3. 点击[Add]，即第三次执行，输出：
 
-   ```javascript
-   ref.current=Num: 1
-   denp[minus]> Num: 2
-   ```
+```javascript
+ref.current=Num: 1
+denp[minus]> Num: 2
+```
 
-   渲染阶段，` #1 uesEffect` 的依赖项从 `<h1>Num: 0<h1>` 变为 `<h1>Num: 1<h1>`， 但**并未发生变化**。所以第一个 effect 函数不会执行。
+   渲染阶段，`#1 uesEffect` 的依赖项从 `<h1>Num: 0<h1>` 变为 `<h1>Num: 1<h1>`， 但**并未发生变化**。所以第一个 effect 函数不会执行。
 
 > 首次渲染时，依赖项判断在 render 阶段进行，发生在 .current 更新之前。
 
@@ -506,7 +504,7 @@ useImperativeHandle(ref, createHandle, [deps])
 
 而 `useImperativeHandle` 可以让父组件获取并执行子组件内某些自定义函数(方法)。本质上其实是子组件将自己内部的函数(方法)通过 `useImperativeHandle` 添加到父组件中 `useRef` 定义的对象中。
 
-useImperativeHandle 应当与 [forwardRef](https://zh-hans.reactjs.org/docs/react-api.html#reactforwardref) 一起使用：
+useImperativeHandle 应当与 [forwardRef][10] 一起使用：
 
 ```js
 function FancyInput(props, ref) {
@@ -530,12 +528,12 @@ FancyInput = forwardRef(FancyInput);
 
 useEffect 是在浏览器渲染结束之后才执行的，而 `componentDidMount`、`componentDidUpdate` 生命周期函数是在浏览器渲染之前同步执行。React 还有一个官方的 hook 是完全等价于这三个生命周期函数的，叫 useLayoutEffect。
 
-`useEffect` 与 `useLayoutEffect` 的区别[ codePen](https://link.zhihu.com/?target=https%3A//codepen.io/Lxylona/pen/xxOgzoV)：
+`useEffect` 与 `useLayoutEffect` 的区别[ codePen][11]：
 
 * useEffect 在浏览器重绘之后才异步执行；
 * useLayoutEffect 在浏览器重绘之前同步执行。
 
-![image-20210719141405287](/images/image-20210719141405287.png)
+![image-20210719141405287][image-2]
 
 因为 useEffect 不会阻塞浏览器重绘，而且平时业务中我们遇到的绝大多数场景都是时机不敏感的，比如取数、修改 dom、事件触发/监听…… 所以**首推用 useEffect 来处理 side effects，性能上的表现会更好一些**。
 
@@ -544,7 +542,7 @@ useEffect 是在浏览器渲染结束之后才执行的，而 `componentDidMount
 ## 什么时候使用 useMemo 和 useCallback
 
 > 性能优化不是免费的。 它们总是带来成本，但这并不总是带来好处来抵消成本。
->
+> 
 > Performance optimizations are not free. They ALWAYS come with a cost but do NOT always come with a benefit.
 
 ### 引用相等
@@ -670,7 +668,7 @@ function DualCounter() {
 
 这是 `useMemo` 内置于 React 的另一个原因（注意这个不适用于 `useCallback`）。
 
-想象一下你有一个计算成本很高的同步计算值的函数（我的意思是有多少应用真实地需要 [像这样计算素数](https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript)，但这就是一个例子）：
+想象一下你有一个计算成本很高的同步计算值的函数（我的意思是有多少应用真实地需要 [像这样计算素数][12]，但这就是一个例子）：
 
 ```js
 function RenderPrimes({iterations, multiplier}) {
@@ -684,7 +682,7 @@ function RenderPrimes({iterations, multiplier}) {
 
 可以这样做的原因是，即使你在每次渲染时定义了计算素数的函数（非常快），React只在需要值时才调用该函数。 除此之外，React还会在给定输入的情况下存储先前的值，并在给定跟之前相同输入的情况下返回先前的值。 这是 **memoization** 在起作用。
 
-每个抽象(和性能优化)都是有代价的。应用 [AHA 编程原则](https://kentcdodds.com/blog/aha-programming)，直到确实需要抽象或优化时才去做，这样可以避免承担成本而不会获得收益的情况。
+每个抽象(和性能优化)都是有代价的。应用 [AHA 编程原则][13]，直到确实需要抽象或优化时才去做，这样可以避免承担成本而不会获得收益的情况。
 
 > AHA编程原则：避免草率的抽象、宁可复制代码也不要错误的抽象（因为抽象通常是为了减少重复代码）和为了改变而优化。
 
@@ -695,3 +693,20 @@ function RenderPrimes({iterations, multiplier}) {
 * 少量的内联函数和变量（这个影响可以忽略不计），机制内在的消耗，潜在的内存泄露。
 
 如果你获得了必要的性能收益，那么这些成本都是值得承担的，但**最好先测量一下**。
+
+[1]:	https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889
+[2]:	https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/
+[3]:	https://link.zhihu.com/?target=https%3A//codesandbox.io/s/pjqnl16lm7
+[4]:	#useref
+[5]:	https://zh-hans.reactjs.org/docs/hooks-reference.html#uselayouteffect
+[6]:	https://en.wikipedia.org/wiki/Memoization
+[7]:	https://link.juejin.cn?target=https%3A%2F%2Fcodepen.io%2Feastling%2Fpen%2FOJJYPYY
+[8]:	https://en.wikipedia.org/wiki/Memoization
+[9]:	#%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%E5%92%8C%E7%B1%BB%E7%BB%84%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB
+[10]:	https://zh-hans.reactjs.org/docs/react-api.html#reactforwardref
+[11]:	https://link.zhihu.com/?target=https%3A//codepen.io/Lxylona/pen/xxOgzoV
+[12]:	https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript
+[13]:	https://kentcdodds.com/blog/aha-programming
+
+[image-1]:	/images/v2-386a449110202d5140d67336a0ade5a0_b.gif
+[image-2]:	/images/image-20210719141405287.png

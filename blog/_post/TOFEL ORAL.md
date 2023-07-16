@@ -1,10 +1,10 @@
 ---
 date: 2022-02-25
 category: Language Learning
-title: TOFEL Speaking Templates
+title: TOEFL Speaking Templates
 cover: /images/speaking-out.webp
 tags:
-  - TOFEL
+  - TOEFL
 ---
 
 ## TASK 1
@@ -39,7 +39,9 @@ Professors can't make exceptions to policy. If they make an exception for studen
 
 The university announced that ... because A & B. / A student proposes that ... because A & B.
 
-The campus announcement talks about ... / According to And there are 
+Right off that bat, the man says that he doesn't like
+
+The woman is perfectly fine with
 
 This is why ... thinks so.
 
@@ -65,7 +67,7 @@ Professor provides an example of ... by talking about ... First of all, he menti
 
 The example clearly illustrates ... (3s)
 
-The professor talks about ... , which means ... And he/she further explains it with two example. 
+The professor talks about ... , which means ... And he/she further explains it with two example-=-09. 
 
 (These are the examples which demonstrate what is ...)
 
