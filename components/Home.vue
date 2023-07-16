@@ -41,6 +41,7 @@
         </div>
       </div>
     </div>
+    <h1 class="block-title">My Blogs</h1>
     <div class="article-list">
       <div class="article-item" v-for="item in $pagination.pages" :key="item.path">
         <router-link :to="item.path">
