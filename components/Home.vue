@@ -20,18 +20,24 @@
     <h1 class="block-title">Projects Made</h1>
     <div class="project" v-for="project in projects" :key="index">
       <div class="article-item">
-        <a href="https://sirenar.github.io/graduate-project-baa/" target="_blank">
+        <a :href="project.url || project.code" target="_blank">
           <img :src="project.img">
         </a>
       </div>
       <div class="project-brief">
         <h2>{{ project.title }}</h2>
         <span>{{ project.des }}</span>
+        <ul class="tags-box" v-if="project.tasks">
+          <li v-for="task in project.tasks" :key="index">{{ task }}</li>
+        </ul>
         <div class="tags-box">
-          <div v-for="tag in project.tags">{{ tag }}</div>
+          <div v-for="tag in project.tags" :key="index">{{ tag }}</div>
         </div>
-        <div class="visit">
-          <a href="https://sirenar.github.io/graduate-project-baa/" target="_blank">Visit it ></a>
+        <div class="visit" v-if="project.url">
+          <a :href="project.url" target="_blank">Visit it ></a>
+        </div>
+        <div class="visit" v-if="project.code">
+          <a :href="project.code" target="_blank">See Code ></a>
         </div>
       </div>
     </div>
@@ -83,7 +89,18 @@ export default {
           img: require('assets/images/medicalDashboard.png'),
           des: 'The system is designed to help healthcare providers identify the underlying cause of short stature and develop an appropriate treatment plan to help the person achieve their full growth potential.',
           url: 'https://sirenar.github.io/graduate-project-baa/',
-          tags: ['Computer Vision', 'Attention Map']
+          tags: ['Computer Vision', 'Attention Map', 'Data Visualization']
+        },
+        {
+          title: 'Mini-Program: Cyan MC',
+          img: require('assets/images/miniprogram.jpg'),
+          des: 'Cyan MC is a mini-program that operates within the WeChat ecosystem and can be used without the need for downloading or installation.',
+          tasks: [
+            'As Product Manager: I conducted user research, requirement analysis, feature planning, and prototype design.',
+            'As Developer: I worked on page routing design, utilized vant-weapp components, implemented device compatibility, and designed data caching.'
+          ],
+          code: 'https://gitee.com/Siren_wang/cyan-mc',
+          tags: ['Mobile Application']
         }
       ]
     }
@@ -218,13 +235,15 @@ h1.block-title
   .article-item
     width: 40%;
     cursor: pointer;
+    max-height: 400px;
+    text-align: center;
   .project-brief
     margin: 0 5%;
     flex: 1;
+    white-space: pre-wrap;
     h2
       text-transform: capitalize;
   .tags-box
-    margin: 12px 0;
     display: flex;
     flex-wrap: wrap;
     div
@@ -233,8 +252,8 @@ h1.block-title
       border-radius: 4px;
       font-size: 12px;
       font-weight: 800;
-      margin-right: 8px;
       cursor: pointer;
+      margin: 12px 8px 0;
       &:hover
         background: var(--theme-accent-color-04)
   .visit a
