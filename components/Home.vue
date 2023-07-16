@@ -85,6 +85,17 @@ export default {
     return {
       projects: [
         {
+          title: 'Low-code development Platform: Wolf',
+          img: require('assets/images/wolf.png'),
+          des: 'Wolf is a low-code platform that is based on visual building, enabling users to create powerful business applications in just a few hours.',
+          tasks: [
+            'Integrating with AI-generated content techniques, we can quickly generate usable pages based on the requirements outlined in the copywriting.',
+            'Provide continuous delivery through DevOps',
+            'Pre-built templates and Cross-Platform Accessibility'
+          ],
+          tags: ['AI-Generated Content', 'Low-Code']
+        },
+        {
           title: 'Medical system for short stature diagnosis',
           img: require('assets/images/medicalDashboard.png'),
           des: 'The system is designed to help healthcare providers identify the underlying cause of short stature and develop an appropriate treatment plan to help the person achieve their full growth potential.',
@@ -232,6 +243,7 @@ h1.block-title
 .project
   display: flex;
   line-height: 1.5;
+  margin-bottom: 20px;
   .article-item
     width: 40%;
     cursor: pointer;
