@@ -22,7 +22,7 @@ Js诞生于1995年，是一种专为与网页交互而设计的脚本语言，�
 
 `BOM` (Browser Object Model)：浏览器对象模型，提供与浏览器交互的方法和接口。<u>主要针对浏览器窗口和子窗口(frame)</u>。
 
-![](..//images/esinjs.png)
+![](/images/esinjs.png)
 
 > Web 浏览器只是 ECMAScript 实现可能存在的一种宿主环境（host environment）。其他宿主环境还有服务器端 JavaScript 平台 Node.js 和即将被淘汰的 Adobe Flash。
 
