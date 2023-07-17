@@ -7,8 +7,9 @@
         :poster="poster"
         :src="require('assets/images/impression.mp4')"
         autoplay
-        defaultMuted
+        muted
         loop
+        playsinline
       ></video>
       <div class="welcome-phrase">
         <div>Hey, I'm <span>Siren.</span></div>
@@ -41,7 +42,7 @@
         </div>
       </div>
     </div>
-    <h1 class="block-title">My Blogs</h1>
+    <h1 class="block-title">My Blog</h1>
     <div class="article-list">
       <div class="article-item" v-for="item in $pagination.pages" :key="item.path">
         <router-link :to="item.path">
@@ -273,7 +274,7 @@ h1.block-title
     color: var(--theme-accent-color) !important;
     font-weight: 800;
   
-@media (max-width: $MQMobile)
+@media (max-width: $MQNarrow)
   .project, .block-title
     display: block;
     margin: 1rem;
