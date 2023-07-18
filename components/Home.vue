@@ -3,9 +3,8 @@
     <div class="article-item myself">
       <!-- <img :src="require('assets/images/selfie.png')"> -->
       <video
-        ref="myVideo"
-        :poster="poster"
         :src="require('assets/images/impression.mp4')"
+        :poster="require('assets/images/shot.png')"
         autoplay
         muted
         loop
@@ -18,7 +17,6 @@
         </div>
       </div>
     </div>
-
     <h1 class="block-title">Projects Made</h1>
     <div class="project" v-for="project in projects" :key="index">
       <div class="article-item">
@@ -49,16 +47,31 @@
         <div class="title">I write <span>for myself</span></div>
         <div>To organize and reflect.</div>
         <div>I use writing as a tool to structure and arrange my thoughts and ideas, and to gain a deeper understanding of myself and the world.</div>
-        <div><span class="important-number">{{ postCount }}</span>blog posts</div>
+        <div class="count"><span class="important-number">{{ postCount }}</span>blog posts</div>
       </div>
       <SelectedPostList />
     </div>
-    <router-link :to="'/blogs/'">
-      <div class="see-more" >
+    <div class="see-more" >
+        <router-link :to="'/blogs/'">
         <div>See more</div>
         <div>Of my blogs</div>
+        </router-link>
       </div>
-    </router-link>
+    <div class="about-me">
+      <div class="img-container">
+        <img :src="require('assets/images/selfie.png')">
+      </div>
+      <div class="about-my-info">
+        <div>- A little story about me</div>
+        <!-- <div class="chinese">王欣茹</div> -->
+        <div class="title">I Am <span>Xinru Wang</span></div>
+        <div>{{ selfIntroduction }}</div>
+        <div class="info-box">
+          <div class="info">Birthday: January 12th, 2000</div>
+          <div class="info">Email: siren.xrw@gmail.com</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -106,7 +119,10 @@ export default {
           code: 'https://gitee.com/Siren_wang/cyan-mc',
           tags: ['Mobile Application']
         }
-      ]
+      ],
+      selfIntroduction: `I grew up in the beautiful city of Hangzhou, China. I have always been someone who loves a good challenge and enjoys learning new things. That's why I have decided to pursue my studies abroad.
+I'm also a foodie and a travel enthusiast. I believe that food is not just about nourishment, but also a way to experience cultures and connect with people.
+I really look forward to embark on a new journey and start exploring!`
     }
   },
   methods: {
@@ -114,7 +130,7 @@ export default {
       return dayjs
         .utc(val)
         .format(this.$themeConfig.dateFormat)
-    }
+    },
   },
   computed: {
     postCount() {
@@ -230,6 +246,47 @@ export default {
   video
     width: 100%;
 
+.about-me
+  display: flex
+  align-items center
+  background #f8f8f8
+  border-radius 8px
+  margin 60px 0
+  padding 30px
+  .img-container
+    flex: 1
+    text-align center
+    img
+      width 50%
+      transition all .2s ease
+      cursor pointer
+      &:hover
+        filter: drop-shadow(var(--theme-card-boxshadow-hover))
+
+  .about-my-info
+    flex: 1
+    margin-left 20px
+    > div:first-child
+      opacity 0.6
+      // font-size 10px
+    span
+      color: var(--theme-accent-color);
+    .title
+      font-size 2rem
+      font-weight bold
+      margin 14px 0
+      & + div
+        white-space pre-wrap
+    .info-box
+      margin-top 12px
+      display flex
+      flex-wrap wrap
+      .info
+        margin-right 40px
+
+html.dark .about-me
+  background var(--theme-card-background)
+
 h1.block-title
   position: relative;
   margin-top: 40px;
@@ -282,6 +339,7 @@ h1.block-title
     font-weight: 800;
 
 .blog-area .annotation
+  position relative
   .title
     font-size: 2rem;
     margin-top: 6vw;
@@ -296,18 +354,24 @@ h1.block-title
       opacity: 0.8;
   span
     color: var(--theme-accent-color);
-  > div:last-child
+  .count
     margin: 2rem;
     font-size: 1.8rem;
     .important-number
       font-size: 3rem;
       margin-right: 6px;
-
-.see-more 
+.see-more
   text-align center
   cursor pointer
-  &:hover
-    color: var(--theme-accent-color);
+  padding 10px
+  border-radius 8px
+  &:hover, a:hover
+    background var(--theme-accent-color)
+    color: white
+    font-weight bold
+    a:visited
+      color: white
+
 
 @media (min-width: $MQNarrow) 
   .blog-area
@@ -332,6 +396,10 @@ h1.block-title
           padding-right: 100px;
       > div:last-child
         font-size: 1.8rem;
+  .see-more
+    margin-top -100px
+    margin-right 200px
+    z-index 10
   
 @media (max-width: $MQNarrow)
   .project, .block-title
@@ -345,7 +413,10 @@ h1.block-title
     :not(.article-list) .article-item
       width: 100%;
       margin: 0 !important;
-    
-    
+  .about-me
+    display block
+    .img-container
+      margin-bottom 30px
+
 
 </style>
