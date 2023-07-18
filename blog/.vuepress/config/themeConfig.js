@@ -4,6 +4,7 @@ module.exports = {
   siteDesc: 'Paint the world colorful.',
   nav: [
     { text: 'Home', link: '/' },
+    { text: 'Blogs', link: '/blogs/' },
     { text: 'Languages', link: '/categories/theme/' },
     { text: 'Principles', link: '/categories/maker/' },
     { text: 'Interview', link: '/categories/animation/' },
@@ -30,7 +31,7 @@ module.exports = {
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2021 ❤️ <a target="_blank" href="#">Siren Wang</a>',
+  copyright: '© 2021 <a target="_blank" href="#">Siren Wang</a>',
   palette: { colors: [
     {
       btnColor: '#ffa1a1',
@@ -77,7 +78,7 @@ module.exports = {
       {
         id: 'post',
         dirname: '_post',
-        path: '/',
+        path: '/blogs/',
         itemPermalink: '/post/:year/:month/:day/:slug.html',
         frontmatter: { title: '' },
         pagination: {

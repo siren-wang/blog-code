@@ -4,7 +4,7 @@
       <div class="theme-header">
         <ul class="floating-squares">
           <li
-            v-for="item in 10"
+            v-for="(item, index) in 10"
             :key="index"
           ></li>
         </ul>

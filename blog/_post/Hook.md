@@ -3,6 +3,7 @@ date: 2021-08-23
 category: React
 title: React Hooks
 cover: /images/react-hooks-best-practices-lead\_.jpeg
+selected: true
 ---
 
 <!-- more -->

@@ -62,9 +62,9 @@
 </template>
 
 <script>
-import PostTag from '@theme/components/PostTag.vue'
-import PostMeta from '@theme/components/PostMeta.vue'
-import PostNav from '@theme/components/PostNav.vue'
+import PostTag from '@theme/components/Posts/Post/PostTag.vue'
+import PostMeta from '@theme/components/Posts/Post/PostMeta.vue'
+import PostNav from '@theme/components/Posts/Post/PostNav.vue'
 import Reward from '@theme/components/Reward.vue'
 import Comments from '@theme/components/Comments.vue'
 export default {
