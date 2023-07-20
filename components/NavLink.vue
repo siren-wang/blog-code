@@ -2,9 +2,10 @@
   <RouterLink
     v-if="isInternal"
     class="nav-link"
-    :class="{'router-link-active': isActived}"
+    :class="{'router-link-active': isActive}"
     :to="link"
     :exact="exact"
+    exact-active-class="router-link-active"
     @focusout.native="focusoutAction"
   >
     {{ item.text }}
@@ -32,14 +33,14 @@ export default {
     }
   },
   computed: {
-    isActived() {
+    isActive() {
       return this.link === this.$page.regularPath;
     },
     link () {
       return ensureExt(this.item.link)
     },
     exact () {
-      if (this.$site.locales) {
+      if (this.$site.locales && Object.keys(this.$site.locales).length) {
         return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
       }
       return this.link === '/'

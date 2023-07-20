@@ -28,34 +28,20 @@ export default {
       border-color: inherit;
       text-align: right;
       text-transform: capitalize;
-      min-height 3rem;
-      transition: all .15s;
       cursor pointer
-      &:hover
-        font-size: 1.168rem;
-        & > a:after
-          // background-color: var(--theme-accent-color);
-          // background-image: none;
-      > a, .dropdown-title
-        display block
+      > a
         line-height 3rem
-        height 100%
-        white-space nowrap
-        &:after
-          position: absolute;
-          top: 50%;
-          right: 1px;
-          width: 3px;
-          height: 2rem;
-          content: "";
-          transform: translate(50%,-50%);
-        &:not(.external)
-          margin-bottom inherit
-          border-bottom none
         &:not(.external).router-link-active
           margin-bottom inherit
           border-bottom none
           &:after
+            position: absolute;
+            top: 50%;
+            right: 1px;
+            width: 3px;
+            height: 2rem;
+            content: "";
+            transform: translate(50%,-50%);
             background-color: var(--theme-accent-color);
             background-image: none;
   .search-box
