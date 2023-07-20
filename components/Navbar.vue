@@ -17,6 +17,7 @@ export default {
 </script>
 <style lang="stylus">
 .theme-nav
+  padding 0 1rem;
   .nav-links
     display block
     margin: 2rem 0 3rem;

@@ -38,7 +38,7 @@
 import Sticker from '@theme/components/Sticker.vue'
 import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
-import NavLink from '@theme/components/NavLink.vue'
+import NavLink from './components/NavLink.vue'
 let initTop
 // get offset top
 function getAbsoluteTop(dom) {

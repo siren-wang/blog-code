@@ -5,11 +5,7 @@ module.exports = {
   nav: [
     { text: 'Home', link: '/' },
     { text: 'Blogs', link: '/blogs/' },
-    { text: 'Languages', link: '/categories/theme/' },
-    { text: 'Principles', link: '/categories/maker/' },
-    { text: 'Interview', link: '/categories/animation/' },
-    { text: 'Accomplishments', link: '/categories/oldtime/' },
-    { text: 'Being alive', link: '/friend-links/' },
+    { text: 'Let\'s Connect', link: '/friend-links/' },
   ],
   searchPlaceholder: 'Search',
   searchMaxSuggestions: 10,
