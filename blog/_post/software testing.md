@@ -3,6 +3,7 @@ date: 2022-03-24
 category: Principles
 title: Software Testing
 cover: /images/software-testing.jpg
+selected: true
 ---
 
 > 找到程序里的所有失败是一个不可判定的问题。

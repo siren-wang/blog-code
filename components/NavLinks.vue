@@ -3,25 +3,7 @@
     v-if="userLinks.length || repoLink"
     class="nav-links"
   >
-    <div v-if="$page.headers">
-      <div
-          v-for="(item, index) in displayHeaders"
-          ref="chairTocItem"
-          :key="index"
-          class="nav-item"
-          :class="[
-            `theme-toc-h${item.level}`,
-            {'router-link-active': activeIndex === index}
-          ]"
-        >
-          <a 
-            :class="{'router-link-active': activeIndex === index}"
-            :href="`#${item.slug}`" :title="item.title">{{ item.title }}
-          </a>
-        </div>
-    </div>
-    <!-- user links -->
-    <div v-else>
+    <div>
       <div
         v-for="item in userLinks"
         :key="item.link"
@@ -56,7 +38,7 @@
 import Sticker from '@theme/components/Sticker.vue'
 import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
-import NavLink from '@theme/components/NavLink.vue'
+import NavLink from './components/NavLink.vue'
 let initTop
 // get offset top
 function getAbsoluteTop(dom) {

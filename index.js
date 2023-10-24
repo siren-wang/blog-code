@@ -5,9 +5,7 @@ module.exports = (options, {themeConfig}) => {
    */
   themeConfig = Object.assign(themeConfig, {
     searchPlaceholder: themeConfig.searchPlaceholder || 'Search',
-    nav: themeConfig.nav || [
-      { text: 'Home', link: '/' }
-    ],
+    nav: themeConfig.nav,
     hostname: themeConfig.hostname || '',
     wordPerminute: themeConfig.wordPerminute || {cn: 300, en: 160},
     social: themeConfig.social || [],
@@ -64,7 +62,7 @@ module.exports = (options, {themeConfig}) => {
         {
           id: 'post',
           dirname: '_post',
-          path: '/',
+          path: '/blogs/',
           itemPermalink: '/post/:year/:month/:day/:slug.html',
           pagination: {
             perPagePosts: 10,

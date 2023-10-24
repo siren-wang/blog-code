@@ -3,12 +3,12 @@
     <div class="article-item myself">
       <!-- <img :src="require('assets/images/selfie.png')"> -->
       <video
-        ref="myVideo"
-        :poster="poster"
         :src="require('assets/images/impression.mp4')"
+        :poster="require('assets/images/shot.png')"
         autoplay
-        defaultMuted
+        muted
         loop
+        playsinline
       ></video>
       <div class="welcome-phrase">
         <div>Hey, I'm <span>Siren.</span></div>
@@ -42,35 +42,27 @@
       </div>
     </div>
     <h1 class="block-title">My Blogs</h1>
-    <div class="article-list">
-      <div class="article-item" v-for="item in $pagination.pages" :key="item.path">
-        <router-link :to="item.path">
-          <div v-if="item.frontmatter.cover" :style="{backgroundImage: `url(${item.frontmatter.cover})`}" class="article-cover">
-            <div class="article-title-wrapper">
-              <h1>{{item.title}}</h1>
-              <div v-html="item.excerpt"></div>
-              <footer class="article-meta">
-                <span><i class="icon-calendar"></i>{{formateDate(item.frontmatter.date)}}</span>
-              </footer>
-            </div>
-          </div>
-          <div v-else>
-            <h3 class="article-title">
-              <router-link :to="item.path">{{item.title}}</router-link>
-            </h3>
-            <div class="article-desc" v-html="item.excerpt"></div>
-            <footer class="article-meta">
-              <span><i class="icon-calendar"></i>{{formateDate(item.frontmatter.date)}}</span>
-            </footer>
-          </div>
+    <div class="blog-area">
+      <div class="annotation">
+        <div class="title">I write <span>for myself</span></div>
+        <div>To organize and reflect.</div>
+        <div>I use writing as a tool to structure and arrange my thoughts and ideas, and to gain a deeper understanding of myself and the world.</div>
+        <div class="count"><span class="important-number">{{ postCount }}</span>blog posts</div>
+      </div>
+      <SelectedPostList />
+    </div>
+    <div class="see-more" >
+        <router-link :to="'/blogs/'">
+        <div>See more</div>
+        <div>Of my blogs</div>
         </router-link>
       </div>
-    </div>
-    <Pagination v-if="$pagination.length > 1"/>
+    <AboutMe />
   </div>
 </template>
 <script>
-import { Pagination } from '@vuepress/plugin-blog/lib/client/components';
+import SelectedPostList from '@theme/components/Posts/SelectedPostList.vue';
+import AboutMe from './components/AboutMe.vue'
 import dayjs from 'dayjs'
 import dayjsPluginUTC from 'dayjs/plugin/utc'
 
@@ -80,7 +72,8 @@ const DATE_MAP = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
 export default {
   name: 'Home',
   components: {
-    Pagination
+    SelectedPostList,
+    AboutMe
   },
   data() {
     return {
@@ -122,11 +115,20 @@ export default {
       return dayjs
         .utc(val)
         .format(this.$themeConfig.dateFormat)
-    }
-  }
+    },
+  },
+  computed: {
+    postCount() {
+      return this.$site.pages.length
+    },
+  },
 }
 </script>
 <style lang="stylus">
+.home
+  display flex
+  flex-direction column
+  align-items center
 .article-item
   display: block;
   overflow: hidden;
@@ -205,6 +207,7 @@ export default {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .5);
+    line-height: 1.2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,16 +233,18 @@ export default {
 
 h1.block-title
   position: relative;
-  padding-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
   &:before
     content: '';
     background-color: var(--theme-accent-color);
     position: absolute;
-    left: 0;
-    top: 50%;
-    width: 12px;
-    height: 24px;
-    transform: translateY(-50%);
+    left: 50%;
+    top: 100%;
+    width: 80px;
+    height: 3px;
+    transform: translateX(-50%);
 
 .project
   display: flex;
@@ -250,15 +255,19 @@ h1.block-title
     cursor: pointer;
     max-height: 400px;
     text-align: center;
+    img
+      border-radius 6px
   .project-brief
     margin: 0 5%;
     flex: 1;
-    white-space: pre-wrap;
     h2
       text-transform: capitalize;
+    div, span
+      white-space: pre-wrap;
   .tags-box
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 12px;
     div
       padding: 2px 10px;
       background: var(--theme-accent-color-02);
@@ -272,12 +281,82 @@ h1.block-title
   .visit a
     color: var(--theme-accent-color) !important;
     font-weight: 800;
+
+.blog-area .annotation
+  position relative
+  .title
+    font-size: 2rem;
+    margin-top: 6vw;
+    font-weight: bold;
+    & + div
+      font-size: 1.8rem;
+      opacity: 0.6;
+      margin-top: 0.4rem;
+      font-weight: bold;
+    & + div + *
+      margin-top: 1.6rem;
+      opacity: 0.8;
+  span
+    color: var(--theme-accent-color);
+  .count
+    margin: 2rem;
+    font-size: 1.8rem;
+    .important-number
+      font-size: 3rem;
+      margin-right: 6px;
+.see-more
+  text-align center
+  cursor pointer
+  padding 10px
+  border-radius 8px
+  &:hover, a:hover
+    background var(--theme-accent-color)
+    color: white
+    font-weight bold
+    a:visited
+      color: white
+
+
+@media (min-width: $MQNarrow) 
+  .blog-area
+    display: flex;
+    justify-content: space-between;
+    .article-list
+      flex: 1;
+      .article-item
+        height: 8vw;
+        .article-cover
+          transform: translateY(-26%);
+          blockquote
+            display: none;
+    .annotation
+      flex: 1;
+      .title
+        font-size: 2.8rem;
+        & + div
+          font-size: 2rem;
+        & + div + *
+          font-size: 1.2rem;
+          padding-right: 100px;
+      > div:last-child
+        font-size: 1.8rem;
+  .see-more
+    margin-top -100px
+    margin-right 200px
+    z-index 10
   
-@media (max-width: $MQMobile)
+@media (max-width: $MQNarrow)
   .project, .block-title
     display: block;
-    margin: 1rem;
     .article-item
       width: 100%;
       margin: 0 !important;
+      
+  .home > *
+    margin: 1rem;
+    :not(.article-list) .article-item
+      width: 100%;
+      margin: 0 !important;
+
+
 </style>

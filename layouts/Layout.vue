@@ -5,11 +5,11 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
-
     <SideBar/>
     <div class="theme-main">
       <slot name="main">
         <Home v-if="$page.pageType === 'home'" />
+        <BlogsPage v-else-if="$page.pageType === 'blogs'" />
         <Archive v-else-if="$page.pageType === 'archive'" />
         <Category v-else-if="$page.pageType === 'category'" />
         <Tag v-else-if="$page.pageType === 'tag'" />
@@ -28,10 +28,11 @@ import Archive from '@theme/components/Archive.vue'
 import Category from '@theme/components/Category.vue'
 import Tag from '@theme/components/Tag.vue'
 import TagItem from '@theme/components/TagItem.vue'
-import Post from '@theme/components/Post.vue'
+import Post from '@theme/components/Posts/Post/Post.vue'
 import FriendLink from '@theme/components/FriendLink.vue'
 import SideBar from '@theme/components/SideBar.vue'
 import SvgSprite from '@theme/components/SvgSprite.vue'
+import BlogsPage from '@theme/components/Posts/BlogsPage.vue'
 import { resolveSidebarItems } from '../util'
 export default {
   name: 'Layout',
@@ -44,6 +45,7 @@ export default {
     Post,
     SideBar,
     FriendLink,
+    BlogsPage,
     SvgSprite
   },
   data () {

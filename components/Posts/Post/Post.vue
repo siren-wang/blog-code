@@ -62,11 +62,12 @@
 </template>
 
 <script>
-import PostTag from '@theme/components/PostTag.vue'
-import PostMeta from '@theme/components/PostMeta.vue'
-import PostNav from '@theme/components/PostNav.vue'
+import PostTag from '@theme/components/Posts/Post/PostTag.vue'
+import PostMeta from '@theme/components/Posts/Post/PostMeta.vue'
+import PostNav from '@theme/components/Posts/Post/PostNav.vue'
 import Reward from '@theme/components/Reward.vue'
 import Comments from '@theme/components/Comments.vue'
+
 export default {
   name: 'Post',
   components: {
@@ -78,6 +79,7 @@ export default {
   },
   computed: {
     isShowReward() {
+      console.log('this.$themeConfig', this.$themeConfig);
       if (this.$frontmatter.reward === false) {
         return false;
       }
@@ -211,6 +213,11 @@ export default {
     color var(--theme-accent-color)!important
 abbr
   cursor help
+
+html.light 
+  .post
+    mark
+      color: white;
 
 @media (max-width: $MQMobile)
   .post-title

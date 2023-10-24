@@ -4,14 +4,25 @@ module.exports = {
   siteDesc: 'Paint the world colorful.',
   nav: [
     { text: 'Home', link: '/' },
-    { text: 'Languages', link: '/categories/theme/' },
-    { text: 'Principles', link: '/categories/maker/' },
-    { text: 'Interview', link: '/categories/animation/' },
-    { text: 'Accomplishments', link: '/categories/oldtime/' },
-    { text: 'Being alive', link: '/friend-links/' },
+    { text: 'Blogs', link: '/blogs/' },
+    { text: 'Let\'s Connect', link: '/friend-links/' },
   ],
   searchPlaceholder: 'Search',
   searchMaxSuggestions: 10,
+  themeConfig: {
+    // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    repo: 'Sirenar/blog-code',
+    // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+    // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+    repoLabel: '查看源码',
+
+    // 假如文档不是放在仓库的根目录下：
+    docsDir: 'blog/_post',
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    // 默认为 "Edit this page"
+    editLinkText: '帮助我们改善此页面！'
+  },
   social: [
     {
       type: 'email',
@@ -30,7 +41,7 @@ module.exports = {
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2021 ❤️ <a target="_blank" href="#">Siren Wang</a>',
+  copyright: '© 2023 <a target="_blank" href="#">Siren Wang</a>',
   palette: { colors: [
     {
       btnColor: '#ffa1a1',
@@ -77,7 +88,7 @@ module.exports = {
       {
         id: 'post',
         dirname: '_post',
-        path: '/',
+        path: '/blogs/',
         itemPermalink: '/post/:year/:month/:day/:slug.html',
         frontmatter: { title: '' },
         pagination: {

@@ -1,13 +1,6 @@
 <template>
   <div class="theme-main__inner friend-link">
-    <header v-if="$frontmatter.cover" :style="headerStyle" class="article__header--hasCover">
-      <div class="article__header-con">
-        <hr class="article-hr"/>
-        <h1 class="post-title" itemprop="name headline">
-          {{ $frontmatter.title }}
-        </h1>
-      </div>
-    </header>
+    <AboutMe />
     <div class="friend-link__list">
       <a class="friend-link__item" :key="item.url" v-for="item in $frontmatter.links" :href="item.url" target="_blank" rel="external noopener">
         <div class="friend-link__details">
@@ -27,11 +20,13 @@
 </template>
 <script>
 import Comments from '@theme/components/Comments.vue'
+import AboutMe from './components/AboutMe.vue'
 export default {
   name: 'FriendLink',
   components: {
-    Comments
-  },
+    Comments,
+    AboutMe
+},
   computed: {
     headerStyle() {
       if (!this.$frontmatter.cover) return;

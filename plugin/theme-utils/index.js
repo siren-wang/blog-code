@@ -30,8 +30,10 @@ module.exports = (options = {}, context) => ({
       return $page.pageType = 'tag';
     } else if (/^\/tags\/\w/.test($page.path)) {
       return $page.pageType = 'tagItem';
-    } else if ($page.path === '/' || $page.path.startsWith('/page/')) {
+    } else if ($page.path === '/') {
       return $page.pageType = 'home';
+    } else if ($page.path === '/blogs/' || $page.path.startsWith('/blogs/page/')) {
+      return $page.pageType = 'blogs';
     } else if ($page.path === '/friend-links/') {
       return $page.pageType = 'friendLink';
     }
@@ -43,12 +45,25 @@ module.exports = (options = {}, context) => ({
     }
   },
   additionalPages() {
-    const pages = [{
-      path: '/archives/',
-      frontmatter: {
-        title: 'Archive'
+    const pages = [
+      {
+        path: '/archives/',
+        frontmatter: {
+          title: 'Archive'
+        },
+      },
+      {
+        path: '/blogs/',
+        frontmatter: {
+          title: 'My Blogs'
+        },
+        pagination: {
+          perPagePosts: 10,
+          prevText: '',
+          nextText: ''
+        },
       }
-    }];
+    ];
     return pages;
   }
 })
