@@ -26,7 +26,7 @@ cover: /images/table.jpg
 | CM | City Manager | 城市经理，负责了解行业政策，结合部门中长期目标，分析拆解业务指标，制定区域城市策略，提升城市门店覆盖率 | 
 | 业务线 | Sales Department | 根据目标用户(target audience)不同，分为直营（自营）、合作商、KA/CKA（大连锁，例如KFC）、拼好饭、校园、白领等多种不同的业务线
 | 跑数 | ETL(Extract, transform, and load) | 跑数是数据仓库和数据分析系统中的重要环节，用于整合分散的数据，为企业提供可靠的数据基础，支持数据驱动的业务决策和运营优化。跑数包括三个步骤： `数据抽取（Extract）` `数据转换（Transform）` `数据加载（Load）` |
-
+| 多租户架构 | Multi-Tenant Architecture | A multi-tenant application is customized for every group of users (so-called tenants) while the entire architecture and core functionality remain the same. | 
 
 ### 背景
 
@@ -132,8 +132,10 @@ cover: /images/table.jpg
 
 ### 我的贡献
 
-- 路由设计
-  - 将不同业务线映射到不同的路由上，实现权限隔离
+- 多租户架构
+  - 采用多租户架构，将不同业务线映射到不同的路由上，实现权限隔离
+  
+  - 功能配置化，简化数据模型和业务模型，使系统具备高度的灵活性和可扩展性
   
 - 重构和治理系统
   - 过去，谛听在技术设计上过于依赖前端判断逻辑，导致增加或修改的成本、风险较高（导致大范围的功能受到影响），因而需要花费较长时间进行测试，以排除故障。为降低业务扩张的开发成本，为决定用单例模式、适配器等设计模式来承载部分复杂的业务逻辑，将数据源存储在状态管理器进行集中管理，提高其状态变化的可预测性；以函数形式封装对数据的访问，使业务线数据得以独立存在，在不修改原有业务逻辑的情况下，增强代码的灵活性和可扩展性

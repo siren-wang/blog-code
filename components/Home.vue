@@ -99,7 +99,7 @@ export default {
         {
           title: 'Mini-Program: Cyan MC',
           img: require('assets/images/miniprogram.jpg'),
-          des: 'Cyan MC is a mini-program that operates within the WeChat ecosystem and can be used without the need for downloading or installation.',
+          des: 'Cyan MC (Cyan Mini Community) is a mini-program that operates within the WeChat ecosystem and can be used without the need for downloading or installation.',
           tasks: [
             'As Product Manager: I conducted user research, requirement analysis, feature planning, and prototype design.',
             'As Developer: I worked on page routing design, utilized vant-weapp components, implemented device compatibility, and designed data caching.'
