@@ -19,6 +19,17 @@ cover: /images/app-create.png
 2. 提供应用的快速开发能力，包括通过可视化和配置化的方式进行 UI、业务逻辑和数据的定义，支持一键发布，协助业务线人员进行应用的开发和发布。
 3. 提供面向企业级应用的能力，包括高可用、安全、权限和容灾体系，同时需要支持第三方的应用进行接入。
 
+### 名词解释
+
+| Term  | Translation   | Definition |
+| ------------- |:-------------:| :-----:|
+| 中后台应用 | Back-office Application | 企业内部用于管理和运营的后台系统。包括数据管理、业务流程管理、报表分析等功能，用于支持企业的日常运营和决策。 |
+| 用户行为数据 | User Behavior Data | 用户在使用软件、应用程序或网站时产生的各种行为和操作的数据，包括点击、浏览、搜索、购买、评论等 | 
+| 埋点 | Data Tracking | 在应用中插入代码，用于跟踪用户行为、收集数据或记录特定事件的过程。Data tracking enables smart, data-driven decisions |
+| CI/CD | Continuous Integration & Continuous Delivery | 持续交付是一种 DevOp 软件开发实践，CI/CD 管道是通过构建、测试和部署代码来驱动软件开发的过程，其目标是通过自动化过程，最大限度地减少人为错误，并保持软件发布过程的一致性。 | 
+| DSL | Domain-Specific Language | 领域专用语言是一种针对特定类问题优化，包含更高级抽象的编程语言。在许多情况下，DSL 并不是由软件人员使用，而是由熟悉 DSL 所针对领域的非编程人员使用。WOLF中的JSON配置就是一种DSL。 | 
+| 事件流（流）| Flow | 流描述参与者和系统之间的交互。Most Low Code is ==Flow based programming== | 
+
 ### 什么是WOLF
 WOLF是我们自研的低代码平台，是一个面向中后台场景的前端应用开发解决方案。
 
