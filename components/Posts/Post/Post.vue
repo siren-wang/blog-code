@@ -137,6 +137,7 @@ export default {
     margin-left: 5%;
     border-radius: 10px;
 .article-content
+  overflow-x: scroll;
   a
     // border-bottom: 1px dotted;
     transition: color .15s,border-color .15s,opacity .15s;
