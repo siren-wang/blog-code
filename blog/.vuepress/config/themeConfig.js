@@ -41,7 +41,7 @@ module.exports = {
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2023 <a target="_blank" href="#">Siren Wang</a>',
+  copyright: '© 2024 <a target="_blank" href="#">Siren Wang</a>',
   palette: { colors: [
     {
       btnColor: '#ffa1a1',
