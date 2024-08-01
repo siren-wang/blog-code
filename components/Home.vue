@@ -41,6 +41,38 @@
         </div>
       </div>
     </div>
+    <h1 class="block-title">Research</h1>
+    <div class="experience" v-for="researchEntry in research" :key="index">
+      <div class="experience__node">
+        <div>{{ researchEntry.time }}</div>
+        <div class="experience__title">{{ researchEntry.title }}</div>
+      </div>
+      <div class="experience__content">
+        <div></div>
+        <div>
+          <div class="experience__content__subtitle">{{ researchEntry.subtitle }}</div>
+          <ol class="tags-box" v-if="researchEntry.tasks">
+            <span v-for="task in researchEntry.tasks" :key="index">{{ task }}</span>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <h1 class="block-title">Employment</h1>
+    <div class="experience" v-for="employmentEntry in employment" :key="index">
+      <div class="experience__node">
+        <div>{{ employmentEntry.time }}</div>
+        <div class="experience__title">{{ employmentEntry.title }}</div>
+      </div>
+      <div class="experience__content">
+        <div></div>
+        <div>
+          <div class="experience__content__subtitle">{{ employmentEntry.subtitle }}</div>
+          <ol class="tags-box" v-if="employmentEntry.tasks">
+            <span v-for="task in employmentEntry.tasks" :key="index">{{ task }}</span>
+          </ol>
+        </div>
+      </div>
+    </div>
     <h1 class="block-title">My Blogs</h1>
     <div class="blog-area">
       <div class="annotation">
@@ -81,13 +113,13 @@ export default {
         {
           title: 'Low-code development Platform: Wolf',
           img: require('assets/images/wolf.png'),
-          des: 'Wolf is a low-code platform that is based on visual building, enabling users to create powerful business applications in just a few hours.',
+          des: 'Wolf is a low-code development platform that is based on visual building, enabling users to create powerful business applications in just a few hours.',
           tasks: [
             'Integrating with AI-generated content techniques, we can quickly generate usable pages based on the requirements outlined in the copywriting.',
             'Provide continuous delivery through DevOps',
             'Pre-built templates and Cross-Platform Accessibility'
           ],
-          tags: ['AI-Generated Content', 'Low-Code']
+          tags: ['Low-Code', 'AI-Generated Content']
         },
         {
           title: 'Medical system for short stature diagnosis',
@@ -107,6 +139,88 @@ export default {
           code: 'https://gitee.com/Siren_wang/cyan-mc',
           tags: ['Mobile Application']
         }
+      ],
+      experience: [
+        {
+          title: 'Data Science: Machine Learning and Natural Language Processing',
+          subtitle: 'Lead Developer - Advisor: Dr. Patrick Houlihan, Columbia University',
+          type: 'research',
+          time: 'May 2022 - Jul 2022',
+          tasks: [
+            'Conducted research on analyzing the potential influence of reviews.',
+            'Proposed a novel approach to predict sales by identifying the time lag of the interaction between reviews and sale fluctuations.',
+            'Published a paper accepted by the 3rd International Conference on Signal Processing and Machine Learning (CONF-SPML 2023) as the lead author: “Predicting Product Sales Based on Sentiment Analysis Using Reviews: The Case of Amazon’s Kindle.”',
+          ],
+          tags: ['NLP', 'Time Series']
+        },
+        {
+          title: 'AI-aided Medical System For Short Stature Diagnosis',
+          subtitle: 'Developer - Advisor: Prof. Mengning Yang',
+          type: 'research',
+          time: 'Nov 2021 - Jun 2022',
+          tasks: [
+            'Applied deep learning techniques to assess the left hand-wrist radiographs of children for growth disorder diagnosis.',
+            'Participated in the model training using attention-maps to identify the discriminative region for bone age expectation regression.',
+            'Analyzed functional requirements, designed, and implemented a system for that purpose. Visit https://sirenar.github.io/graduate-project-baa',
+          ],
+          tags: ['Computer Vision', 'Data Visualization']
+        },
+        {
+          title: 'LinkLocker: Smart Locker for Online Trading, Supported by a WeChat Mini Program',
+          subtitle: 'Group Leader & Developer - Advisor: Prof. Mengning Yang',
+          type: 'research',
+          time: 'Sep 2019 - Dec 2020',
+          tasks: [
+            'Created a WeChat-based mini program that serves as a social platform for information sharing and second-hand goods sales, from ideation to application, by leading a team of eight developers.',
+            'Led an eight-member team to design and build a smart locker; the locker is equipped with Bluetooth LE IoT sensors for secure, self-service item exchange, enabling password-protected access and eliminating waiting times.',
+            'Won the First Prize Award in the Southwest Division Selection Tournament of the 13th iCAN International Contest of Innovation.',
+            'Receive angel investment amounting to over 2 million RMB from investors including STO Express.',
+            'Granted a patent for an innovative invention. Patent No.202021785066.3, Date of Grant: 2021.1',
+          ],
+          tags: ['Mobile Application', 'IoT programming']
+        },
+        {
+          title: 'Graph Theory Application and Text Data Classification',
+          subtitle: 'Participant - Advisor: Dr. Thomas Sauerwald',
+          type: 'research',
+          time: 'Jul 2019 - Aug 2019',
+          tasks: [
+            'Adopted a graph-based approach for contextual text normalization.',
+            'Proposed a model – GRFEM (Gated Recurrent Feature Extraction Model) to encode-decode inputs and feed the neural network to normalize tokens.'
+          ]
+        },
+        {
+          title: 'Meituan',
+          subtitle: 'Software Developer',
+          type: 'employment',
+          time: 'July 2022 - Present',
+          tasks: [
+            'Played a key role in the design and development of the cloud-based low-code development platform Wolf, a comprehensive online platform for building enterprise-level applications using low-code technology, and employed AIGC for user support.',
+            'Implemented, maintained, and refactored Diting (諦聽), an internal CRM tool that enables frontline business analysts to perform self-service data retrieval and integration in drag-and-drop gestures, resulting in good user feedback.',
+            'Migrated 6 existing projects to a comprehensive gateway for architecture upgrading, robustness, and scalability enhancement.'
+          ]
+        },
+        {
+          title: 'Meituan',
+          subtitle: 'Front-End Developer | Internship',
+          type: 'employment',
+          time: 'May 2021 - Sep 2021',
+          tasks: [
+            'Assisted with the implementing of features in various projects, including user experience optimization and UI design enhancing.',
+            'Coded adhering to latest standards and best practices, and engaged in the continuous delivery process.',
+            'Performed timely troubleshooting and resolved technical issues.'
+          ]
+        },
+        {
+          title: 'Chongqing Xiantao Big Data Valley',
+          subtitle: 'Knowledge Manager | Internship',
+          type: 'employment',
+          time: 'June 2020',
+          tasks: [
+            'Engaged in on-site research at an optical fiber manufacturing facility, contributing to the collection and processing of shop floor and manufacturing data utilizing a cloud platform and MES to facilitate the construction of data-driven decision-making models.',
+            'Drafted a knowledge management planning proposal for knowledge sharing between projects.'
+          ]
+        }
       ]
     }
   },
@@ -121,6 +235,12 @@ export default {
     postCount() {
       return this.$site.pages.length
     },
+    research() {
+      return this.experience.filter(entry => entry.type === 'research');
+    },
+    employment() {
+      return this.experience.filter(entry => entry.type === 'employment');
+    }
   },
 }
 </script>
@@ -264,6 +384,7 @@ h1.block-title
       text-transform: capitalize;
     div, span
       white-space: pre-wrap;
+.project, .experience
   .tags-box
     display: flex;
     flex-wrap: wrap;
@@ -281,6 +402,46 @@ h1.block-title
   .visit a
     color: var(--theme-accent-color) !important;
     font-weight: 800;
+
+.experience
+  &__node
+    display: flex;
+    align-items: center;
+    > div:first-child
+      flex: 0 0 220px;
+      text-align: end;
+      padding-right: 30px;
+      position: relative;
+      &:after
+        content: '';
+        background-color: var(--theme-accent-color);
+        position: absolute;
+        top: calc(50% - 3.5px);
+        right: -3px;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+  &__title
+    flex: 1;
+    font-weight: bold;
+    font-size: 18px;
+  &__content
+    display: flex;
+    > div:first-child
+      flex: 0 0 220px;
+      margin: 10px 0;
+      border-right: 1px solid #f2f2f2;
+
+    &__subtitle
+      line-height: 30px;
+      color: var()
+
+    .tags-box 
+      padding-left: 0;
+      span:not(last-child)
+        margin-bottom: 8px;
+  &__title, &__content > div:not(first-child)
+    padding-left: 30px;
 
 .blog-area .annotation
   position relative

@@ -14,6 +14,6 @@ git add -A
 git commit -m 'deploy'
 
 # 发布到 https://sirenar.github.io
-git push -f git@github.com:sirenar/sirenar.github.io.git master:gh-pages
+git push -f git@github.com:siren-wang/siren-wang.github.io.git master:gh-pages
 
 cd -
