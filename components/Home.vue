@@ -1,19 +1,19 @@
 <template>
   <div class="theme-main__inner home">
     <div class="article-item myself">
-      <!-- <img :src="require('assets/images/selfie.png')"> -->
-      <video
+      <img :src="require('assets/images/photo240805.jpg')">
+      <!-- <video
         :src="require('assets/images/impression.mp4')"
         :poster="require('assets/images/shot.png')"
         autoplay
         muted
         loop
         playsinline
-      ></video>
+      ></video> -->
       <div class="welcome-phrase">
         <div>Hey, I'm <span>Siren.</span></div>
         <div>Glad to have you here.</div>
-        <div class="notes">I'm a <span>front-end developer</span> based in Chengdu, China. 
+        <div class="notes">I'm a <span>software developer</span> based in Chengdu, China. 
         </div>
       </div>
     </div>

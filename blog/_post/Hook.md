@@ -17,7 +17,6 @@ selected: true
 **Hooks allow you to reuse stateful logic without changing your component hierarchy.** 
 
 
-
 Redux 的作者 Dan Abramov [总结][1]了组件类的几个缺点：
 
 - 大型组件很难拆分和重构，也很难测试。

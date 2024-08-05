@@ -19,6 +19,7 @@
       </slot>
     </div>
     <SvgSprite/>
+    <div class="shadow-box" ref="shadowBox"></div>
   </div>
 </template>
 
@@ -105,6 +106,20 @@ export default {
       this.isSidebarOpen = false
       this.$eventBus.$emit('EV_TOGGLE_SEARCH', false)
     })
+
+    const status = +window.localStorage.getItem('mode');
+    if (status === 1) {
+      const shadowBox = this.$refs.shadowBox;
+
+      document.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e;
+        shadowBox.style.background = `radial-gradient(600px at ${clientX}px ${clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+      });
+
+      document.addEventListener('mouseleave', () => {
+        // shadowBox.style.background = 'none';
+      })
+    }
   },
   methods: {
     toggleSidebar (to) {
@@ -135,4 +150,7 @@ export default {
 <style lang="stylus">
 @require '../styles/mobile'
 @require '../styles/color_scheme'
+.shadow-box
+  position absolute
+  pointer-events none
 </style>

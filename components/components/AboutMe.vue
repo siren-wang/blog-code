@@ -45,6 +45,8 @@ I really look forward to embark on a new journey and start exploring!`
       width 50%
       transition all .2s ease
       cursor pointer
+      border-radius 50%
+      overflow hidden
       &:hover
         filter: drop-shadow(var(--theme-card-boxshadow-hover))
 
